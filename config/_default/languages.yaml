@@ -6,17 +6,47 @@
 en:
   languageCode: en-us
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
+  contentDir: content/en
 
 # Uncomment the lines below to configure your website in a second language.
-#zh:
-#  languageCode: zh-Hans
-#  contentDir: content/zh
-#  title: Chinese website title...
-#  params:
-#    description: Site description in Chinese...
-#  menu:
-#    main:
-#      - name: 传
-#        url: '#about'
-#        weight: 1
+zh:
+ languageCode: zh-Hans
+ contentDir: content/zh
+ title: 殷聪
+ params:
+   description: Site description in Chinese...
+   hugoblox:
+     locale:
+       date_format: "2006年1月2日"
+       time_format: "15:04"
+     copyright:
+       # Copyright notice - supports {year}, {name}, {license} placeholders
+       notice: "© {year} {name}，本作品采用 {license} 许可。"
+       license:
+         type: cc                          # cc | custom
+         allow_derivatives: false
+         share_alike: true
+         allow_commercial: false   
+ menu:
+   main:
+     - name: 个人简介
+       url: /
+       weight: 10
+     - name: 研究成果
+       url: publications/
+       weight: 11
+     - name: 数据产品
+       url: products/
+       weight: 12
+     - name: 会议报告
+       url: presentations/
+       weight: 13
+     - name: 进展动态
+       url: news/
+       weight: 20
+     - name: 学术履历
+       url: experience/
+       weight: 30
+     # - name: Teaching
+     #   url: teaching/
+     #   weight: 40
