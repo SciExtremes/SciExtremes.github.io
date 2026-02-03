@@ -1,0 +1,21 @@
+/* Force a consistent H3 heading size across the Resume/Biography section */
+.resume-biography h3 {
+  font-size: 1.25rem !important; /* matches text-xl (mobile) */
+  line-height: 1.75rem !important;
+}
+
+/* Tablet / small screens (matches sm:text-2xl) */
+@media (min-width: 640px) {
+  .resume-biography h3 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+}
+
+/* Large screens (matches lg:text-3xl) */
+@media (min-width: 1024px) {
+  .resume-biography h3 {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+}
