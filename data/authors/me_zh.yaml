@@ -1,0 +1,147 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: 殷聪
+  given: 聪
+  family: 殷
+  alternate: 'Cong Yin'  # Example: 王伟
+  pronunciation: ''  # Example: Wáng Wěi
+  pronouns: Cong Yin
+postnominals:
+  - PhD
+  # - MIEEE
+status:
+  icon: "🌍"
+role: 博士后
+bio: |
+  我专注于气候科学领域，致力于使用水文气候、数据驱动和空间统计方法，增进对野火和极端气候事件的理解。我在揭示极端火灾天气的同步性和持续性方面取得了进展，这些因素对极端火灾具有重要影响。
+  
+  我目前在加州大学Merced分校做博士后，与[John Abatzoglou教授](https://engineering.ucmerced.edu/content/john-abatzoglou)合作，他领导着[Climatology Lab](https://www.climatologylab.org)。
+
+affiliations:
+  - name: 加州大学Merced分校
+    url: https://snri.ucmerced.edu/content/cong-yin
+
+links:
+  - icon: at-symbol
+    url: mailto:congyin@ucmerced.edu
+    label: E-mail Me
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/cyinglobe.bsky.social
+  - icon: brands/weixin
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk3NTExMzM0MA==&action=getalbum&album_id=3910201765521752070#wechat_redirect
+  - icon: brands/github
+    url: https://github.com/CYinGlobe
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/cong-yin-0812912a1
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=en&user=PVEiSDIAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0003-8618-9659
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Cong-Yin-3
+
+interests:
+  - 水文气候学
+  - 野火
+  - 极端气候事件
+
+education:
+  - degree: 博士，地图学与地理信息系统
+    institution: 中国科学院大学
+    start: 2018-09-01
+    end: 2024-06-30
+    summary: |
+      学位论文题目：全球复合极端气候事件的检测、变化和影响研究。导师：[王卷乐研究员](https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/xxxt/200908/t20090819_2421129.html)。
+    button:
+      text: 阅读学位论文
+      url: http://dpaper.las.ac.cn/Dpaper/paperbuy
+      icon: hero/arrow-down-tray
+  - degree: 联合培养博士，气候动力学
+    institution: 哥伦比亚大学
+    start: 2023-04-01
+    end: 2024-07-31
+    summary: |
+      在[Mingfang Ting教授](https://lamont.columbia.edu/directory/mingfang-ting)和[Kai Kornhuber博士](https://iiasa.ac.at/staff/kai-kornhuber)的指导下发表论文：[CETD, a global compound events detection and visualisation toolbox and dataset](https://doi.org/10.1038/s41597-025-04530-x)。    
+  - degree: 学士，土地资源管理
+    institution: 长安大学
+    start: 2014-09-01
+    end: 2018-06-30
+    summary: |
+      绩点: 3.5/4.0
+
+experience:
+  - role: 博士后
+    org: 加州大学Merced分校
+    start: 2024-08-01
+    summary: |
+      **研究工作**
+      - Increasing synchronicity of global extreme fire weather
+      - Fire weather waves fuel extreme fire activity
+      - Heatwaves enable wildfire activity in the western United States
+    button:
+      text: 查看主页
+      url: https://snri.ucmerced.edu/content/cong-yin
+      icon: hero/arrow-down-tray
+  - role: 研究助理
+    org: 中国科学院地理科学与资源研究所
+    start: 2018-09-01
+    end: 2024-06-30
+    summary: |
+      **研究工作**
+      - [Changes in global heat waves and its socioeconomic exposure in a warmer future](https://doi.org/10.1016/j.crm.2022.100459)
+      - [Diagnose the dominant climate factors and periods of spring phenology in Qinling Mountains, China](https://doi.org/10.1016/j.ecolind.2021.108211)
+      - [Spatiotemporal distribution and risk assessment of heat waves based on apparent temperature in the one belt and one road region](https://doi.org/10.3390/rs12071174)
+
+skills:
+  - name: 技术能力
+    items:
+      - label: Linux
+        level: 4
+      - label: Python
+        level: 5
+      - label: R
+        level: 4
+  - name: 专业能力
+    items:
+      - label: 数据科学
+        level: 4
+      - label: 统计模型
+        level: 4
+      - label: 空间分析
+        level: 5
+
+languages:
+  - name: 中文
+    level: 5
+    label: 母语
+  - name: 英语
+    level: 4
+    label: 流利
+
+awards:
+  - title: '博士研究生国际合作培养计划'
+    url: https://ucas.ac.cn/tz/5cd1a84f792248608474a6bde8ca02f0.htm
+    certificate_url: https://ucas.ac.cn/docs//2023-04/9996a09ff7624edaadf98bd72fbf6a6e.pdf
+    date: '2022-11-08'
+    awarder: 中国科学院大学
+    icon: custom/ucas
+    summary: |
+      我入选了中国科学院大学2022年度博士研究生国际合作培养计划，在哥伦比亚大学进行了为期14个月（2023年4月至2024年7月）的联合培养。期间，我在Mingfang Ting教授和Kai Kornhuber博士的指导下开展工作。这使我有机会向气候科学领域的顶尖学者学习，并开展合作。
+  - title: '一等所长奖学金'
+    url: http://igsnrr.cas.cn/yjsjy/jzxj/
+    certificate_url: 
+    date: '2023-07-01'
+    awarder: 中国科学院地理科学与资源研究所
+    icon: custom/igsnrr
+    summary: |
+      该奖项颁发给学术表现前15%的学生。
+  - title: '一等学业奖学金'
+    url: https://onestop.ucas.ac.cn/home/info/4b058ab2-d690-4ccf-9a9c-4ec481c39749/1
+    certificate_url: 
+    date: '2023-12-01'
+    awarder: 中国科学院大学
+    icon: custom/ucas
+    summary: |
+      该奖项颁发给学术表现前30%的学生。

@@ -1,0 +1,151 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Cong Yin
+  given: Cong
+  family: Yin
+  alternate: '殷聪'  # Example: 王伟
+  pronunciation: ''  # Example: Wáng Wěi
+  pronouns: 殷聪
+postnominals:
+  - PhD
+  # - MIEEE
+status:
+  icon: "🌍"
+role: Postdoc Scientist
+bio: |
+  I am an early-career climate scientist pushing the boundaries of understanding 
+  wildfires and climate extremes using hydroclimatic, data-driven, and geostatistical approaches. 
+  My work has led to step-changes in understanding the synchronicity and persistence of extreme fire weather, 
+  factors that strongly influence extreme fires.
+  
+  I work with [Prof. John Abatzoglou](https://engineering.ucmerced.edu/content/john-abatzoglou), 
+  who leads the [Climatology Lab](https://www.climatologylab.org) at University of California, Merced.
+
+affiliations:
+  - name: University of California, Merced
+    url: https://snri.ucmerced.edu/content/cong-yin
+
+links:
+  - icon: at-symbol
+    url: mailto:congyin@ucmerced.edu
+    label: E-mail Me
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/cyinglobe.bsky.social
+  - icon: brands/weixin
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk3NTExMzM0MA==&action=getalbum&album_id=3910201765521752070#wechat_redirect
+  - icon: brands/github
+    url: https://github.com/CYinGlobe
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/cong-yin-0812912a1
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=en&user=PVEiSDIAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0003-8618-9659
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Cong-Yin-3
+
+interests:
+  - Hydroclimatology
+  - Wildfire
+  - Climate Extremes
+
+education:
+  - degree: PhD, Geographic Information System
+    institution: University of Chinese Academy of Sciences
+    start: 2018-09-01
+    end: 2024-06-30
+    summary: |
+      Dissertation on _Detection, Changes, and Impacts of Global Compound Events_. Supervised by [Prof Juanle Wang](http://english.igsnrr.cas.cn/sourcedb/yw_30508/scientists/En_sklreis/200908/t20090819_456359.html).
+    button:
+      text: Read Dissertation
+      url: http://dpaper.las.ac.cn/Dpaper/paperbuy
+      icon: hero/arrow-down-tray
+  - degree: Visiting PhD, Climate Dynamics
+    institution: Columbia University
+    start: 2023-04-01
+    end: 2024-07-31
+    summary: |
+      Work on [a global compound event detection and visualization toolbox and dataset](https://doi.org/10.1038/s41597-025-04530-x). Supervised by [Prof. Mingfang Ting](https://lamont.columbia.edu/directory/mingfang-ting) and [Dr. Kai Kornhuber](https://iiasa.ac.at/staff/kai-kornhuber).    
+  - degree: BSc, Land Resources Management
+    institution: Chang’an University
+    start: 2014-09-01
+    end: 2018-06-30
+    summary: |
+      GPA: 3.5/4.0
+
+experience:
+  - role: Postdoc Scientist
+    org: University of California, Merced
+    start: 2024-08-01
+    summary: |
+      **Research:**
+      - Increasing synchronicity of global extreme fire weather
+      - Fire weather waves fuel extreme fire activity
+      - Heatwaves enable wildfire activity in the western United States
+    button:
+      text: View portfolio
+      url: https://snri.ucmerced.edu/content/cong-yin
+      icon: hero/arrow-down-tray
+  - role: Research Assistant
+    org: Institute of Geographic Sciences and Natural Resources Research, CAS
+    start: 2018-09-01
+    end: 2024-06-30
+    summary: |
+      **Research:**
+      - [Changes in global heat waves and its socioeconomic exposure in a warmer future](https://doi.org/10.1016/j.crm.2022.100459)
+      - [Diagnose the dominant climate factors and periods of spring phenology in Qinling Mountains, China](https://doi.org/10.1016/j.ecolind.2021.108211)
+      - [Spatiotemporal distribution and risk assessment of heat waves based on apparent temperature in the one belt and one road region](https://doi.org/10.3390/rs12071174)
+
+skills:
+  - name: Technical Skills
+    items:
+      - label: Linux
+        level: 4
+      - label: Python
+        level: 5
+      - label: R
+        level: 4
+  - name: Professional Skills
+    items:
+      - label: Data Science
+        level: 4
+      - label: Statistics
+        level: 4
+      - label: Spatial Analyze
+        level: 5
+
+languages:
+  - name: English
+    level: 4
+    label: Fluent
+  - name: Chinese
+    level: 5
+    label: Native
+
+awards:
+  - title: 'Scholarship for the International PhD Joint Training Program'
+    url: https://ucas.ac.cn/tz/5cd1a84f792248608474a6bde8ca02f0.htm
+    certificate_url: https://ucas.ac.cn/docs//2023-04/9996a09ff7624edaadf98bd72fbf6a6e.pdf
+    date: '2022-11-08'
+    awarder: University of Chinese Academy of Sciences
+    icon: custom/ucas
+    summary: |
+      I was awarded a $24,000 international collaboration grant, which supported a 14-month research visit (April 2023 – July 2024) to Columbia University, under the mentorship of Dr. Mingfang Ting and Dr. Kai Kornhuber. This collaboration enabled me to work alongside leading climate scientists.
+  - title: 'First Class Director Scholarship'
+    url: http://igsnrr.cas.cn/yjsjy/jzxj/
+    certificate_url: 
+    date: '2023-07-01'
+    awarder: Institute of Geographic Sciences and Natural Resources Research, CAS
+    icon: custom/igsnrr
+    summary: |
+      The award is granted to the top 15% of students with the best academic performance.
+  - title: 'First Class Academic Scholarship'
+    url: https://onestop.ucas.ac.cn/home/info/4b058ab2-d690-4ccf-9a9c-4ec481c39749/1
+    certificate_url: 
+    date: '2023-12-01'
+    awarder: University of Chinese Academy of Sciences
+    icon: custom/ucas
+    summary: |
+      The award is granted to the top 30% of students with the best academic performance.
