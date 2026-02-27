@@ -34,7 +34,7 @@ tags:
 - Spring phenology
 - Climate Extremes
 - Qinling
-featured: true
+featured: false
 
 # links:
 # - name: ""

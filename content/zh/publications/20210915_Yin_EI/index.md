@@ -31,12 +31,10 @@ abstract: 'The important effect of climate factors on spring phenology has been 
 summary: 
 
 tags:
-- 气候变化  
-- 土地覆盖  
-- 秦岭  
-- 春季物候  
-- 植被  
-featured: true
+- 春季物候    
+- 气候变化 
+- 秦岭 
+featured: false
 
 # links:
 # - name: ""
