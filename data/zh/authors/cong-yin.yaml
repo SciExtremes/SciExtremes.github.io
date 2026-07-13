@@ -1,0 +1,64 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: 殷聪
+  given: 聪
+  family: 殷
+  alternate: 'Cong Yin' # Example: 王伟
+  pronunciation: '' # Example: Wáng Wěi
+  pronouns: Cong Yin
+postnominals:
+  - PhD
+# - MIEEE
+status:
+  icon: "🌍"
+role: 博士后
+bio: |
+  我专注于气候科学领域，致力于使用水文气候、数据驱动和空间统计方法，增进对野火和极端气候事件的理解。
+  目前以第一作者或通讯作者在Science Advances, Scientific Data等期刊发表论文10篇，以其他作者身份发表论文5篇，参与编写专著2部，授权发明专利1项。
+  研究成果获得Nature Briefing、Vox、The Conversation和The Debrief等知名科技媒体的采访或报道。
+  
+  我目前在加州大学Merced分校做博士后，与[John Abatzoglou教授](https://engineering.ucmerced.edu/content/john-abatzoglou)合作，他领导着[Climatology Lab](https://www.climatologylab.org)。
+
+affiliations:
+  - name: 加州大学Merced分校
+    url: https://snri.ucmerced.edu/content/Cong-Yin
+
+links:
+  - icon: at-symbol
+    url: mailto:congyin@ucmerced.edu
+    label: E-mail Me
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/cyinglobe.bsky.social
+  - icon: brands/weixin
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk3NTExMzM0MA==&action=getalbum&album_id=3910201765521752070#wechat_redirect
+  - icon: brands/github
+    url: https://github.com/CYinGlobe
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/Cong-Yin-0812912a1
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=en&user=PVEiSDIAAAAJ&view_op=list_works&sortby=pubdate
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0003-8618-9659
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Cong-Yin-3
+
+interests:
+  - 水文气候学
+  - 野火
+  - 极端气候事件
+
+education:
+  - degree: 博士，地图学与地理信息系统
+    institution: 中国科学院大学
+    start: 2018-09-01
+    end: 2024-06-30
+  - degree: 联合培养博士，气候动力学
+    institution: 哥伦比亚大学
+    start: 2023-04-01
+    end: 2024-07-31
+  - degree: 学士，土地资源管理
+    institution: 长安大学
+    start: 2014-09-01
+    end: 2018-06-30

@@ -89,7 +89,7 @@ jobs:
       if: hashFiles('package.json') != ''
       run: |
         if ! node -e "require.resolve('@tailwindcss/cli/package.json')" 2>/dev/null; then
-          echo "::error title=Missing dependency '@tailwindcss/cli'::Hugo >= 0.161.0 requires the npm @tailwindcss/cli package. Add it to package.json:"
+          echo "::error title=Missing dependency '@tailwindcss/cli'::Hugo >= 0.161.1 requires the npm @tailwindcss/cli package. Add it to package.json:"
           echo "::error::  pnpm add @tailwindcss/cli tailwindcss"
           echo "::error::See https://github.com/HugoBlox/kit for upgrade instructions."
           exit 1

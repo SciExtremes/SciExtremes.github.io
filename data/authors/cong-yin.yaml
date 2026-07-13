@@ -1,0 +1,66 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Cong Yin
+  given: Cong
+  family: Yin
+  alternate: '殷聪'  # Example: 王伟
+  pronunciation: ''  # Example: Wáng Wěi
+  pronouns: 殷聪
+postnominals:
+  - PhD
+  # - MIEEE
+status:
+  icon: "🌍"
+role: Postdoc Scientist
+bio: |
+  I am an early-career climate scientist pushing the boundaries of understanding wildfires and climate extremes 
+  using hydroclimatic, data-driven, and geostatistical approaches. My work has led to step-changes 
+  in understanding the synchronicity and persistence of extreme fire weather, 
+  factors that strongly influence extreme fire activity.
+  
+  I work with [Prof. John Abatzoglou](https://engineering.ucmerced.edu/content/john-abatzoglou), 
+  who leads the [Climatology Lab](https://www.climatologylab.org) at University of California, Merced.
+
+affiliations:
+  - name: University of California, Merced
+    url: https://snri.ucmerced.edu/content/Cong-Yin
+
+links:
+  - icon: at-symbol
+    url: mailto:congyin@ucmerced.edu
+    label: E-mail Me
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/cyinglobe.bsky.social
+  - icon: brands/weixin
+    url: https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk3NTExMzM0MA==&action=getalbum&album_id=3910201765521752070#wechat_redirect
+  - icon: brands/github
+    url: https://github.com/CYinGlobe
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/Cong-Yin-0812912a1
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?hl=en&user=PVEiSDIAAAAJ&view_op=list_works&sortby=pubdate
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0003-8618-9659
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Cong-Yin-3
+
+interests:
+  - Hydroclimatology
+  - Wildfire
+  - Climate Extremes
+
+education:
+  - degree: PhD, Geographic Information System
+    institution: University of Chinese Academy of Sciences
+    start: 2018-09-01
+    end: 2024-06-30
+  - degree: Visiting PhD, Climate Dynamics
+    institution: Columbia University
+    start: 2023-04-01
+    end: 2024-07-31
+  - degree: BSc, Land Resources Management
+    institution: Chang’an University
+    start: 2014-09-01
+    end: 2018-06-30
