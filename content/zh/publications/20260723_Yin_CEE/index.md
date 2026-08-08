@@ -1,5 +1,5 @@
 ---
-title: "火天气波驱动全球极端火灾"
+title: "Communications Earth & Environment | 火天气波驱动全球极端火灾"
 authors:
 - Cong-Yin
 - John T. Abatzoglou

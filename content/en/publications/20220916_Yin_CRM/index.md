@@ -1,5 +1,5 @@
 ---
-title: "Changes in global heat waves and its socioeconomic exposure in a warmer future"
+title: "Climate Risk Management | Changes in global heat waves and its socioeconomic exposure in a warmer future"
 authors:
 - Cong-Yin
 - Yaping Yang

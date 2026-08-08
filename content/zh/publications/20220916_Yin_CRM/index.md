@@ -1,5 +1,5 @@
 ---
-title: "气候变暖背景下全球热浪及其社会经济暴露度的未来变化"
+title: "Climate Risk Management | 气候变暖背景下全球热浪及其社会经济暴露度的未来变化"
 authors:
 - Cong-Yin
 - Yaping Yang

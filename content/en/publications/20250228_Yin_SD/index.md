@@ -1,5 +1,5 @@
 ---
-title: "CETD, a global compound events detection and visualisation toolbox and dataset"
+title: "Scientific Data | CETD, a global compound events detection and visualisation toolbox and dataset"
 authors:
 - Cong-Yin
 - Mingfang Ting

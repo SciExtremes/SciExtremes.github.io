@@ -34,7 +34,7 @@ tags:
 - 热浪
 - 体感温度
 - 工具
-featured: true
+featured: false
 
 # links:
 # - name: ""

@@ -1,5 +1,5 @@
 ---
-title: "CETD：全球复合事件检测与可视化工具箱及数据集"
+title: "Scientific Data | CETD：全球复合事件检测与可视化工具箱及数据集"
 authors:
 - Cong-Yin
 - Mingfang Ting

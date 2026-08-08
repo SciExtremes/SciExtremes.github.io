@@ -1,5 +1,5 @@
 ---
-title: "全球极端火险天气同步性的增强"
+title: "Science Advances | 全球极端火险天气同步性的增强"
 authors:
 - Cong-Yin
 - John T. Abatzoglou

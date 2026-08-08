@@ -34,7 +34,7 @@ tags:
 - Heat Waves
 - Apparent Temperature
 - Tool
-featured: true
+featured: false
 
 # links:
 # - name: ""
