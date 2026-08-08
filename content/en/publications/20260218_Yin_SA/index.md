@@ -1,5 +1,5 @@
 ---
-title: "Science Advances | **Increasing synchronicity of global extreme fire weather**"
+title: "Increasing synchronicity of global extreme fire weather | Science Advances"
 authors:
 - Cong-Yin
 - John T. Abatzoglou

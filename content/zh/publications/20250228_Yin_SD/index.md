@@ -1,5 +1,5 @@
 ---
-title: "Scientific Data | CETD：全球复合事件检测与可视化工具箱及数据集"
+title: "CETD：全球复合事件检测与可视化工具箱及数据集 | Scientific Data"
 authors:
 - Cong-Yin
 - Mingfang Ting
@@ -22,7 +22,7 @@ publishDate: "2025-03-02T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Scientific Data*"
+publication: ""
 publication_short: ""
 
 abstract: '复合事件（CEs）因其对社会和生态的重大影响而日益受到关注。然而，其固有的复杂性给气候科学家和从业者带来了挑战，凸显出建立一个更易上手、更直观的复合事件检测与可视化框架的必要性。为此，我们推出了复合事件工具箱与数据集（CETD），这是首个集成化、交互式且可扩展的复合事件检测与可视化平台。CETD结合观测数据、再分析数据和模式模拟，能够量化多种复合事件类型的频率、持续时间和严重程度，包括多变量事件、连续型事件和并发型事件。它可以分析往往与人类健康、野火和空气污染等严重影响相关联的复合事件，例如高温-干旱、强风-降水以及高温-干旱-停滞事件。为验证CETD的性能，我们针对若干高影响事件开展了统计分析，如2019年澳大利亚野火和2022年欧洲热浪。CETD的易用性和可扩展性将惠及更广泛的科研群体，帮助大家在气候变暖的背景下更好地理解、应对复合事件所带来的风险与挑战。'

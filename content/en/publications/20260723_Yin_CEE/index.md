@@ -1,5 +1,5 @@
 ---
-title: "<strong>Fire weather waves drive extreme fires globally</strong><br>Communications Earth & Environment"
+title: "Fire weather waves drive extreme fires globally | Communications Earth & Environment"
 authors:
 - Cong-Yin
 - John T. Abatzoglou
