@@ -1,5 +1,5 @@
 ---
-title: "Communications Earth & Environment | Fire weather waves drive extreme fires globally"
+title: "**Fire weather waves drive extreme fires globally** | Communications Earth & Environment"
 authors:
 - Cong-Yin
 - John T. Abatzoglou
@@ -22,7 +22,7 @@ publishDate: "2026-07-23T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Communications Earth & Environment*"
+publication: ""
 publication_short: ""
 
 abstract: 'We define fire weather waves as persistent extreme fire weather, which can intensify fire activity by sustaining exceptionally warm, dry, and windy conditions. Here, we use daily fire weather index, fire activity, and meteorological data to examine the impacts of fire weather waves on fires, as well as their patterns and trends across global terrestrial ecoregions. Fire weather waves account for only 4% of days but coincide with 26% of the area burned and nearly half of the top 1% most energetic fires in forested ecoregions. Compared with grassland and shrubland fires, forest fires exhibit a larger and more persistent increase in daily burned area in response to fire weather waves, particularly in Mediterranean forests. Fire weather wave frequency has significantly increased across most burnable lands during 1979–2024. Climate projections indicate that fire weather waves will increase throughout the 21st century. These findings underscore fire weather waves as an essential component of early warning systems to strengthen preparedness for extreme fires.'

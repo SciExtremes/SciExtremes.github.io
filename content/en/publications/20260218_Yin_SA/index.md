@@ -1,5 +1,5 @@
 ---
-title: "Science Advances | Increasing synchronicity of global extreme fire weather"
+title: "Science Advances | **Increasing synchronicity of global extreme fire weather**"
 authors:
 - Cong-Yin
 - John T. Abatzoglou
@@ -23,7 +23,7 @@ publishDate: "2026-02-18T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Science Advances*"
+publication: ""
 publication_short: ""
 
 abstract: 'Concurrent extreme fire weather creates favorable conditions for widespread large fires, which can complicate the coordination of fire suppression resources and degrade regional air quality. Here, we examine the patterns and trends of intra- and interregional synchronous fire weather (SFW) and explore their links to climate variability and air quality impacts. We find climatologically elevated intraregional SFW in boreal regions, as well as interregional synchronicity among northern temperate and boreal regions. Significant increases in SFW occurred during 1979 to 2024, with more than a twofold increase observed in most regions. We estimate that over half of the observed increase is attributable to anthropogenic climate change. Internal modes of climate variability strongly influence SFW in several regions, including Equatorial Asia, which experiences 43 additional intraregional SFW days during El Niño years. Furthermore, SFW is strongly correlated with regional fire-sourced PM2.5 in multiple regions globally. These findings highlight the growing challenges posed by SFW for firefighting coordination and human health. Increasing synchronicity of global extreme fire weather constrains fire suppression coordination and exacerbates air pollution.'
