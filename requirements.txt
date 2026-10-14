@@ -1,0 +1,2 @@
+# Used by content validation, tests and the generator; not shipped to browsers.
+PyYAML==6.0.3

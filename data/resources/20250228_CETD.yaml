@@ -1,0 +1,20 @@
+id: 20250228_CETD
+date: '2025-03-01'
+paper_ids:
+- 20250228_Yin_SD
+image: data/20250228_CETD.png
+links:
+- label: accessData
+  url: https://doi.org/10.6084/m9.figshare.27623715
+image_fit: contain
+display:
+  visible: true
+  featured: true
+  home: true
+  order: 10
+  image: true
+name: CETD
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

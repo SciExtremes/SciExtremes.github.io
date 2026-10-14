@@ -1,0 +1,28 @@
+{{/* Homepage selections and section highlights share one visual component and record. */}}
+{{ $home := .home | default false }}
+{{ $prefix := cond $home (cond (eq .page.Section "publications") "home" "record") "feature" }}
+<section class="{{ if $home }}home-story{{ if .surface }} surface{{ end }}{{ else }}feature-band{{ end }}" id="{{ $prefix }}-{{ .record.id }}">
+  <div class="container feature-grid">
+    <div class="feature-copy">
+      <p class="eyebrow feature-label">{{ i18n (cond $home "highlights" "featured") }} · {{ i18n .page.Section }}</p>
+      <h2><a href="{{ .page.RelPermalink }}">{{ .record.name | default .title }}</a></h2>
+      {{ if and (eq .page.Section "publications") (eq site.Language.Lang "zh") .page.Params.translated_title }}<p class="translated-title">{{ .page.Params.translated_title }}</p>{{ end }}
+      {{ with .record.name }}<p class="feature-subtitle">{{ $.title }}</p>{{ end }}
+      {{ if eq .page.Section "publications" }}
+        {{ partial "publication-status.html" .record }}
+        <p class="journal">{{ with partial "publication-venue.html" .record }}<em>{{ . }}</em> · {{ end }}{{ .record.year | default (time.AsTime .record.date).Year }}</p>
+      {{ else if in (slice "presentations" "news") .page.Section }}
+        {{ partial "record-meta.html" .record }}
+      {{ end }}
+      {{ with .record.location_label }}<p class="muted">{{ index . site.Language.Lang }}</p>{{ else }}{{ with .record.location }}<p class="muted">{{ . }}</p>{{ end }}{{ end }}
+      {{ if eq .page.Section "data" }}{{ partial "resource-meta.html" .record }}{{ end }}
+      {{ with .summary }}<p class="feature-summary">{{ . }}</p>{{ end }}
+      <div class="feature-actions">
+        {{ if eq .page.Section "publications" }}
+          {{ partial "action-group.html" (slice (dict "url" .page.RelPermalink "label" "readPaper") (dict "url" ("publications/" | relLangURL) "label" "allPublications")) }}
+        {{ else }}{{ partial "item-actions.html" . }}{{ end }}
+      </div>
+    </div>
+    {{ partial "image.html" . }}
+  </div>
+</section>

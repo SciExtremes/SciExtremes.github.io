@@ -1,0 +1,17 @@
+{{ $actions := slice }}
+{{ with .record.doi }}{{ $actions = $actions | append (dict "url" (printf "https://doi.org/%s" .) "label" "paper") }}{{ else }}{{ with .record.url }}{{ $actions = $actions | append (dict "url" . "label" "paper") }}{{ end }}{{ end }}
+  {{ range .record.links }}{{ $actions = $actions | append . }}{{ end }}
+  {{/* Resource links are owned by Data and resolved through its paper_ids association. */}}
+  {{ $data := partial "items.html" (dict "site" .page.Site "section" "data") }}
+  {{ $related := where $data "record.paper_ids" "intersect" (slice .record.id) }}
+  {{ range $related }}
+    {{ $resource := .record }}
+    {{ range .record.links }}
+      {{ $link := merge . (dict "label" (cond (eq .label "accessData") "Data" .label)) }}
+      {{ if and (gt (len $related) 1) (not .name) }}{{ $link = merge $link (dict "name" (dict "en" $resource.name "zh" $resource.name)) }}{{ end }}
+      {{ $actions = $actions | append $link }}
+    {{ end }}
+  {{ end }}
+  {{ $bib := partial "citation.html" . }}
+  {{ $actions = $actions | append (dict "url" $bib.RelPermalink "label" "cite" "download" true) }}
+{{ partial "action-group.html" $actions }}

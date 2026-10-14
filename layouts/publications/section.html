@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ partial "page-heading.html" . }}
+  <div class="container bibliography">
+    {{ $items := partial "publication-items.html" (dict "site" .Site) }}
+    {{ partial "year-list.html" (dict "items" $items "template" "publication-item.html") }}
+  </div>
+{{ end }}

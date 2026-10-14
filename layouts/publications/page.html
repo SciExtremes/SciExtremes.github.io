@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ $record := partial "record.html" . }}
+  <article class="container detail-page">
+    <header class="detail-heading">
+      <p class="eyebrow">{{ with partial "publication-venue.html" $record }}{{ . }} · {{ end }}{{ $record.year | default (time.AsTime $record.date).Year }}</p>
+      <h1 data-pagefind-meta="title">{{ partial "title.html" . }}</h1>
+      {{ with .Params.translated_title }}<p class="translated-title">{{ . }}</p>{{ end }}
+      {{ partial "publication-status.html" $record }}
+      {{ partial "author-roles.html" $record }}
+      <p class="authors">{{ partial "authors.html" $record }}</p>
+      {{ partial "publication-links.html" (dict "record" $record "page" .) }}
+    </header>
+    <div class="detail-grid">
+      <div><section class="prose"><h2>{{ i18n "abstract" }}</h2>{{ .Content }}</section></div>
+      {{ partial "altmetric.html" $record }}
+    </div>
+    {{ if and $record.display.image $record.image }}{{ partial "figure.html" (dict "image" $record.image "caption" .Params.image_caption "title" $record.title "alt" (index $record.image_alt site.Language.Lang)) }}{{ end }}
+    {{ if $record.display.media }}{{ partial "media-coverage.html" $record.id }}{{ end }}
+    {{ partial "related-content.html" (dict "page" . "id" $record.id) }}
+    {{ partial "related-links.html" (dict "section" "publications" "ids" $record.related_version_ids "heading" "relatedVersions" "anchor" "related-versions") }}
+  </article>
+{{ end }}

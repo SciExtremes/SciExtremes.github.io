@@ -1,0 +1,4 @@
+{{ $labels := slice }}
+{{ with .author_roles.equal_contribution }}{{ $labels = $labels | append (printf "* %s" (i18n "equalContribution")) }}{{ end }}
+{{ with .author_roles.corresponding }}{{ $labels = $labels | append (printf "† %s" (i18n "correspondingAuthor")) }}{{ end }}
+{{ if $labels }}<p class="author-role-note muted">{{ delimit $labels " · " }}</p>{{ end }}

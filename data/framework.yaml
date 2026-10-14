@@ -1,0 +1,219 @@
+# Shared bilingual framework; stage SQ links stay inside Research.
+# Link a term only when it is a main research topic or result of the selected paper.
+title:
+  en: Research Framework
+  zh: 研究框架
+description:
+  en: Climate change and natural variability influence the intensity, persistence, and synchronicity of
+    extreme conditions. Their effects on wildfire activity depend on fuels, ignitions, and landscape context,
+    while environmental and societal consequences also reflect exposure and vulnerability. The framework
+    links these processes with three scientific questions, from the development of climate extremes to
+    extreme wildfire behavior and future risks. Earth observations, climate analysis, and data-driven
+    methods provide a shared foundation for observing events, investigating their mechanisms, and assessing
+    risk. These connections guide both my published research and the directions I am developing.
+  zh: 气候变化与自然变率影响极端条件的强度、持续性和同步性，其对野火活动的作用受到可燃物、点火与景观条件的共同调节；野火的环境和社会后果还取决于暴露与脆弱性。这一框架通过三个科学问题，将气候极端事件的形成、极端野火行为及其影响与未来风险连接起来。地球观测、气候分析和数据驱动方法贯穿事件观测、机制解释与风险评估，为已发表研究和下一步工作提供共同基础。
+context:
+  en: Hydroclimatic controls
+  zh: 水文气候调控
+stages:
+- id: drivers
+  title:
+    en: Climate drivers
+    zh: 气候驱动
+  terms:
+  - label:
+      en: Climate change
+      zh: 气候变化
+    detail:
+      en: Changing background climate
+      zh: 变化的气候背景
+    paper_id: 20260218_Yin_SA
+  - label:
+      en: Natural variability
+      zh: 自然变率
+    detail:
+      en: Modes and circulation
+      zh: 气候模态与环流
+    paper_id: 20260218_Yin_SA
+  - label:
+      en: Compound extremes
+      zh: 复合极端事件
+    detail:
+      en: Heat, drought and concurrent events
+      zh: 高温、干旱与同期事件
+    paper_id: 20250228_Yin_SD
+  sq_ids:
+  - sq1
+- id: weather
+  title:
+    en: Extreme fire weather
+    zh: 极端火险天气
+  relation:
+    en: Shapes
+    zh: 塑造
+  terms:
+  - label:
+      en: Intensity
+      zh: 强度
+    detail:
+      en: Severity of conditions
+      zh: 火险天气条件的严峻程度
+    paper_id: ''
+  - label:
+      en: Persistence
+      zh: 持续性
+    detail:
+      en: Duration of extremes
+      zh: 极端条件的持续时间
+    paper_id: 20260723_Yin_CEE
+  - label:
+      en: Synchronicity
+      zh: 同步性
+    detail:
+      en: Co-occurrence across space
+      zh: 不同区域的并发
+    paper_id: 20260218_Yin_SA
+  sq_ids:
+  - sq1
+  - sq2
+- id: activity
+  title:
+    en: Wildfire behavior
+    zh: 野火行为
+  relation:
+    en: Favors
+    zh: 促成
+  terms:
+  - label:
+      en: Size
+      zh: 规模
+    detail:
+      en: Burned area
+      zh: 过火面积
+    paper_id: 20260617_Kalashnikov_SA
+  - label:
+      en: Speed
+      zh: 速度
+    detail:
+      en: Fire spread and growth
+      zh: 野火蔓延与增长
+    paper_id: ''
+  - label:
+      en: Energy
+      zh: 辐射活动
+    detail:
+      en: Fire radiative activity
+      zh: 辐射活动代理指标
+    paper_id: 20260723_Yin_CEE
+  sq_ids:
+  - sq2
+- id: impacts
+  title:
+    en: Impacts & risks
+    zh: 影响与风险
+  relation:
+    en: Influences
+    zh: 影响
+  terms:
+  - label:
+      en: Air quality
+      zh: 空气质量
+    detail:
+      en: Fire-sourced smoke
+      zh: 火灾烟雾
+    paper_id: 20260218_Yin_SA
+  - label:
+      en: Exposure & risk
+      zh: 暴露与风险
+    detail:
+      en: People, ecosystems and infrastructure
+      zh: 人群、生态系统与基础设施
+    paper_id: ''
+  - label:
+      en: Preparedness
+      zh: 灾害应对
+    detail:
+      en: Risk assessment and coordination
+      zh: 风险评估与协同应对
+    paper_id: ''
+  sq_ids:
+  - sq3
+modifiers:
+- id: fuel
+  title:
+    en: Fuel conditions
+    zh: 可燃物条件
+  detail:
+    en: Moisture and availability
+    zh: 含水量与可利用性
+  target:
+    en: Modulates weather → fire
+    zh: 调节天气 → 火灾的转化
+- id: ignition
+  title:
+    en: Ignition & landscape
+    zh: 点火与景观
+  detail:
+    en: Ignition sources and biome context
+    zh: 点火来源与生物群系背景
+  target:
+    en: Modulates weather → fire
+    zh: 调节天气 → 火灾的转化
+- id: exposure
+  title:
+    en: Exposure & vulnerability
+    zh: 暴露与脆弱性
+  detail:
+    en: People, ecosystems and infrastructure
+    zh: 人群、生态系统与基础设施
+  target:
+    en: Modulates fire → impacts
+    zh: 调节火灾 → 影响的转化
+foundation:
+- title:
+    en: Data & methods
+    zh: 数据与方法
+  label:
+    en: Open datasets & tools
+    zh: 开放数据与工具
+  resource_ids:
+  - 20250228_CETD
+  - 20220916_GHWT
+  - 20220516_GATHW
+- title:
+    en: Observe
+    zh: 观测
+  lines:
+  - en: Satellite observations
+    zh: 卫星观测
+  - en: Reanalysis & climate simulations
+    zh: 再分析与气候模拟
+- title:
+    en: Explain
+    zh: 解释
+  lines:
+  - en: Event-based analysis
+    zh: 基于事件的分析
+  - en: Hydroclimatic & geostatistical methods
+    zh: 水文气候与地统计方法
+- title:
+    en: Predict
+    zh: 预测
+  lines:
+  - en: Data-driven models
+    zh: 数据驱动模型
+  - en: Validation & uncertainty
+    zh: 验证与不确定性
+  note:
+    en: Ongoing research direction
+    zh: 持续研究方向
+legend:
+  process:
+    en: Process relationships
+    zh: 过程关系
+  support:
+    en: Observation and analytical support
+    zh: 观测与分析支撑
+caption:
+  en: Conceptual framework. Arrows represent qualitative relationships, not estimated effects.
+  zh: 概念框架。箭头表示定性关系，不代表估计的效应量。

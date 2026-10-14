@@ -1,0 +1,48 @@
+{{ $title := partial "title.html" . }}
+{{ $siteTitle := (index hugo.Data.profile .Site.Language.Lang).name }}
+{{ $description := .Description | default .Params.summary | default (index hugo.Data.focus .Site.Language.Lang).introduction }}
+{{ if .IsHome }}{{ $description = (index hugo.Data.focus .Site.Language.Lang).introduction }}{{ end }}
+{{ if .IsPage }}{{ $description = .Params.summary | default (.Plain | truncate 180) | default $description }}{{ end }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ $siteTitle }}{{ else }}{{ $title }} · {{ $siteTitle }}{{ end }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Site.Language.Locale }}" href="{{ .Permalink }}">{{ end }}
+{{ $record := partial "record.html" . }}
+{{ if and $record (not $record.display.visible) }}<meta name="robots" content="noindex">{{ end }}
+{{ $section := cond .IsHome "home" .Section }}
+{{ if eq .Type "about" }}{{ $section = "about" }}{{ end }}
+{{ if $section }}<meta data-pagefind-meta="section[content]" data-pagefind-filter="{{ i18n "sectionFilter" }}[content]" content="{{ i18n $section }}">{{ end }}
+{{ with $record }}<meta data-pagefind-meta="date[content]" content="{{ partial "date.html" . }}">{{ end }}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ $imagePath := hugo.Data.home.hero.image }}
+{{ if and $record.display.image $record.image }}{{ $imagePath = $record.image }}{{ end }}
+{{ if eq .Type "about" }}{{ $imagePath = hugo.Data.profile.portrait }}{{ end }}
+{{ with resources.Get (printf "images/%s" $imagePath) }}
+  {{ $share := . }}{{ if not (in (slice ".svg" ".gif") (lower (path.Ext .Name))) }}{{ $share = .Fit "1200x630 webp" }}{{ end }}
+  <meta property="og:image" content="{{ $share.Permalink }}">
+{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+{{ with resources.Get "images/icon.png" }}{{ $icon := .Resize "64x64 png" }}<link rel="icon" href="{{ $icon.RelPermalink }}" type="image/png">{{ end }}
+{{ with .Site.Home.OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $siteTitle }}" href="{{ .Permalink }}">{{ end }}
+{{ if and .IsPage (eq .Section "publications") }}
+  {{ with $record.doi }}<meta name="citation_doi" content="{{ . }}">{{ end }}<meta name="citation_title" content="{{ $record.title }}">
+  {{ range $record.authors }}<meta name="citation_author" content="{{ . }}">{{ end }}
+  {{ with $record.journal }}<meta name="citation_journal_title" content="{{ . }}">{{ end }}
+  {{ if eq $record.type "conference" }}{{ with $record.booktitle }}<meta name="citation_conference_title" content="{{ . }}">{{ end }}{{ end }}
+  <meta name="citation_publication_date" content="{{ partial "date-time.html" $record }}">
+{{ end }}
+{{ $styles := slice (resources.Get "css/tokens.css") (resources.Get "css/main.css") (resources.Get "css/layout.css") (resources.Get "css/components.css") }}
+{{ $styleTarget := "css/site.css" }}
+{{/* Hugo caches concatenations by target: specialized input needs its own target. */}}
+{{ if eq .Section "research" }}{{ $styles = $styles | append (resources.Get "css/research.css") }}{{ $styleTarget = "css/research-site.css" }}{{ end }}
+{{ $css := $styles | resources.Concat $styleTarget | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ if .IsHome }}{{ with resources.Get (printf "images/%s" hugo.Data.home.hero.image) }}{{ $image := .Resize "1920x webp" }}
+<link rel="preload" as="image" href="{{ $image.RelPermalink }}" imagesrcset="{{ (.Resize "960x webp").RelPermalink }} 960w, {{ $image.RelPermalink }} 1920w" imagesizes="100vw">
+{{ end }}{{ end }}

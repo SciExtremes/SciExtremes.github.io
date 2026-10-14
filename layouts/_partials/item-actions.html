@@ -1,0 +1,14 @@
+{{ $actions := .record.links | default slice }}
+{{ if eq .page.Section "data" }}{{ $actions = partial "resource-actions.html" . }}{{ end }}
+{{ if not .home }}
+  {{ with .record.event_url }}{{ $actions = $actions | append (dict "url" . "label" "event") }}{{ end }}
+{{ end }}
+{{ if not (and (eq .page.Section "data") .record.links) }}
+  {{ $actions = $actions | append (dict "url" .page.RelPermalink "label" (cond (eq .page.Section "news") "readStory" "details")) }}
+{{ end }}
+{{ if .home }}
+  {{ $actions = $actions | append (dict "url" (printf "%s/" .page.Section | relLangURL) "label" (printf "all%s" (.page.Section | strings.FirstUpper))) }}
+{{ else }}
+  {{ if partial "related-pages.html" (dict "section" "publications" "ids" .record.paper_ids) }}{{ $actions = $actions | append (dict "url" (printf "%s#related-papers" .page.RelPermalink) "label" "relatedPapers") }}{{ end }}
+{{ end }}
+{{ partial "action-group.html" $actions }}

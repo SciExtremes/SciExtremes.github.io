@@ -1,0 +1,4 @@
+{{/* UTF-8 names are retained. Escape plain-text TeX punctuation without changing source facts. */}}
+{{ $value := strings.Replace (printf "%v" .) "\\" "⟦BACKSLASH⟧" }}
+{{ range $char := slice "&" "%" "$" "#" "_" "{" "}" }}{{ $value = strings.Replace $value $char (printf "\\%s" $char) }}{{ end }}
+{{ return (strings.Replace $value "⟦BACKSLASH⟧" "\\textbackslash{}") }}

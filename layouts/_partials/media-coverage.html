@@ -1,0 +1,8 @@
+{{ $paper := index hugo.Data.publications . }}
+{{ if and $paper.display.visible $paper.display.media }}
+  {{ with index hugo.Data.media . }}
+    <section class="related-section" id="media"><h2>{{ i18n "media" }}</h2><ul class="media-list">
+      {{ range . }}<li><a href="{{ .url }}"><strong>{{ .outlet }}</strong> · {{ .title }}</a></li>{{ end }}
+    </ul></section>
+  {{ end }}
+{{ end }}

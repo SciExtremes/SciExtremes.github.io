@@ -1,0 +1,5 @@
+{{/* A named paper in prose uses the same formal title as every other view. */}}
+{{ $page := site.GetPage (printf "/publications/%s" (.Get "id")) }}
+{{ if not $page }}{{ errorf "Unknown paper shortcode ID %q in %s" (.Get "id") .Page.Path }}{{ end }}
+{{ $record := partial "record.html" $page }}
+{{ if $record.display.visible }}<a href="{{ $page.RelPermalink }}">{{ partial "title.html" $page }}</a>{{ else }}{{ partial "title.html" $page }}{{ end }}

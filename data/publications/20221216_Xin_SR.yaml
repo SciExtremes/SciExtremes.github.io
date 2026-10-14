@@ -1,0 +1,34 @@
+id: 20221216_Xin_SR
+title: Evaluation of IMERG and ERA5 precipitation products over the Mongolian Plateau
+authors:
+- Ying Xin
+- Yaping Yang
+- Xiaona Chen
+- Xiafang Yue
+- Yangxiaoyue Liu
+- Cong Yin
+journal: Scientific Reports
+date: '2022-12-16'
+doi: 10.1038/s41598-022-26047-8
+volume: '12'
+number: '1'
+pages: '21776'
+links:
+- label: URL
+  url: https://www.nature.com/articles/s41598-022-26047-8
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: false
+  media: true
+  attention: true
+year: 2022
+date_precision: day
+image: ''
+image_fit: contain
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

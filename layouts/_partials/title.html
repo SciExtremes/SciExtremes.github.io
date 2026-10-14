@@ -1,0 +1,6 @@
+{{ $title := .Title }}
+{{ if .IsHome }}{{ $title = (index hugo.Data.profile .Site.Language.Lang).name }}{{ end }}
+{{ if or .IsSection (eq .Section "about") }}{{ $title = i18n .Section | default $title }}{{ end }}
+{{ $record := partial "record.html" . }}
+{{ if eq .Section "publications" }}{{ with $record.title }}{{ $title = . }}{{ end }}{{ end }}
+{{ return $title }}

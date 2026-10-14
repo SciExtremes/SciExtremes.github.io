@@ -1,0 +1,10 @@
+{{ if and .display.attention .doi }}
+<aside class="attention" data-pagefind-ignore data-loading="{{ i18n "attentionLoading" }}" data-empty="{{ i18n "attentionEmpty" }}" data-unavailable="{{ i18n "attentionUnavailable" }}">
+  <span class="attention-label">Altmetric</span>
+  <div class="attention-badge">
+    {{/* An empty neutral ring communicates no available score, never a simulated zero. */}}
+    <span class="attention-fallback" role="img" aria-label="{{ i18n "attentionUnavailable" }}" title="{{ i18n "attentionUnavailable" }}"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="none" stroke="#c5cbd1" stroke-width="9"/></svg></span>
+    <div class="altmetric-embed" data-badge-type="donut" data-badge-popover="bottom" data-doi="{{ .doi }}" data-hide-no-mentions="true" data-hide-less-than="1"></div>
+  </div>
+</aside>
+{{ end }}

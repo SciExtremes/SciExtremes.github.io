@@ -1,0 +1,9 @@
+{{ $r := .record }}{{ $c := $r.citation }}
+{{ $fields := slice (printf "title = {{%s}}" (partial "bibtex-value.html" $c.title)) (printf "author = {%s}" (partial "bibtex-value.html" (delimit $c.authors " and "))) (printf "year = {%d}" (int $c.year)) }}
+{{ with $c.publisher }}{{ $fields = $fields | append (printf "publisher = {%s}" (partial "bibtex-value.html" .)) }}{{ end }}
+{{ $doi := $r.doi | default $c.doi }}
+{{ with $doi }}{{ $fields = $fields | append (printf "doi = {%s}" .) (printf "url = {https://doi.org/%s}" .) }}{{ else }}{{ with $c.url }}{{ $fields = $fields | append (printf "url = {%s}" .) }}{{ end }}{{ end }}
+{{ with $r.version }}{{ $fields = $fields | append (printf "version = {%s}" (partial "bibtex-value.html" .)) }}{{ end }}
+{{ $text := printf "@misc{%s,\n  %s\n}\n" $r.id (delimit $fields ",\n  ") }}
+{{ $path := strings.TrimPrefix "/" (strings.TrimPrefix (urls.Parse site.BaseURL).Path .page.RelPermalink) }}
+{{ return (resources.FromString (printf "%scite.bib" $path) $text) }}

@@ -1,0 +1,31 @@
+id: 20250221_Liu_JOH
+title: A Transformer-based method to simulate multi-scale soil moisture
+authors:
+- Yangxiaoyue Liu
+- Ying Xin
+- Cong Yin
+journal: Journal of Hydrology
+date: '2025-07-01'
+doi: 10.1016/j.jhydrol.2025.132900
+volume: '655'
+pages: '132900'
+links:
+- label: URL
+  url: https://www.sciencedirect.com/science/article/pii/S0022169425002380
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: false
+  media: true
+  attention: true
+year: 2025
+date_precision: month
+image: ''
+image_fit: contain
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''
+number: ''

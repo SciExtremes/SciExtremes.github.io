@@ -1,0 +1,38 @@
+id: 20260617_Kalashnikov_SA
+title: Heatwaves enable wildfire activity in the western United States
+authors:
+- Dmitri A. Kalashnikov
+- John T. Abatzoglou
+- Emily L. Williams
+- Cong Yin
+- Madhulika Gurazada
+- Mukesh Kumar
+- Ashwin P. Thomas
+- Precious E. Ebiendele
+journal: Science Advances
+date: '2026-06-17'
+doi: 10.1126/sciadv.aea1277
+volume: '12'
+number: '25'
+pages: eaea1277
+image: publications/20260617_Kalashnikov_SA.jpg
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+  media: true
+  attention: true
+year: 2026
+links:
+- label: Data
+  url: https://doi.org/10.5281/zenodo.15748738
+- label: Code
+  url: https://doi.org/10.5281/zenodo.18895413
+date_precision: day
+image_fit: contain
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

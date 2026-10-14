@@ -1,0 +1,1 @@
+<time datetime="{{ partial "date-time.html" . }}">{{ partial "date.html" . }}</time>{{ with .end_date }} – <time datetime="{{ partial "date-time.html" (dict "date" . "date_precision" $.date_precision) }}">{{ partial "date.html" (dict "date" . "date_precision" $.date_precision) }}</time>{{ end }}

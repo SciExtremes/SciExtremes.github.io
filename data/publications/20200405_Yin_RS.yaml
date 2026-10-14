@@ -1,0 +1,31 @@
+id: 20200405_Yin_RS
+title: Spatiotemporal Distribution and Risk Assessment of Heat Waves Based on Apparent Temperature in
+  the One Belt and One Road Region
+authors:
+- Cong Yin
+- Fei Yang
+- Juanle Wang
+- Yexing Ye
+journal: Remote Sensing
+date: '2020-04-06'
+doi: 10.3390/rs12071174
+volume: '12'
+number: '7'
+pages: '1174'
+image: publications/20200405_Yin_RS.png
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+  media: true
+  attention: true
+year: 2020
+date_precision: day
+image_fit: contain
+links: []
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

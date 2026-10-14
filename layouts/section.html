@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ partial "page-heading.html" . }}
+  {{ $items := partial "items.html" (dict "site" .Site "section" .Section) }}
+  {{ range where $items "record.display.featured" true }}{{ partial "feature.html" . }}{{ end }}
+  {{ $regular := where $items "record.display.featured" false }}
+  <div class="container section-list">
+    {{ if in (slice "data" "presentations" "news") .Section }}
+      {{ partial "year-list.html" (dict "items" $regular "template" "record-item.html") }}
+    {{ else }}
+      {{ range $regular }}{{ partial "record-item.html" . }}{{ end }}
+    {{ end }}
+  </div>
+  {{ with .Content }}<section class="container section-notes"><div class="prose">{{ . }}</div></section>{{ end }}
+{{ end }}

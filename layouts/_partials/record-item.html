@@ -1,0 +1,12 @@
+<article class="record-row" id="record-{{ .record.id }}">
+  <div class="record-copy">
+    {{ if or (eq .page.Section "news") (eq .page.Section "presentations") }}{{ partial "record-meta.html" .record }}{{ end }}
+    <h2><a href="{{ .page.RelPermalink }}">{{ .record.name | default .title }}</a></h2>
+    {{ with .record.name }}<p class="feature-subtitle">{{ $.title }}</p>{{ end }}
+    {{ with .record.location_label }}<p class="muted">{{ index . site.Language.Lang }}</p>{{ else }}{{ with .record.location }}<p class="muted">{{ . }}</p>{{ end }}{{ end }}
+    {{ with .summary }}<p class="muted">{{ . }}</p>{{ end }}
+    {{ if eq .page.Section "data" }}{{ partial "resource-meta.html" .record }}{{ end }}
+    {{ partial "item-actions.html" . }}
+  </div>
+  {{ partial "image.html" . }}
+</article>

@@ -1,0 +1,3 @@
+{{ $venue := .journal }}
+{{ if in (slice "conference" "chapter") .type }}{{ $venue = .booktitle }}{{ else if eq .type "preprint" }}{{ $venue = .repository }}{{ else if eq .type "report" }}{{ $venue = .institution | default .publisher }}{{ end }}
+{{ return ($venue | default "") }}

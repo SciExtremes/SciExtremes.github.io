@@ -1,0 +1,23 @@
+id: 20231214_AGU
+date: '2023-12-14'
+event: AGU 2023
+event_url: https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1393543
+location: Moscone Center, San Francisco, United States
+kind: poster
+paper_ids:
+- 20250228_Yin_SD
+links:
+- label: posterPDF
+  url: /uploads/20231214_AGU.pdf
+image: presentations/20231214_AGU.jpg
+image_fit: cover
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

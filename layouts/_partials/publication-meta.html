@@ -1,0 +1,7 @@
+{{ $r := .record }}{{ $venue := partial "publication-venue.html" $r }}
+{{ $parts := slice }}
+{{ with $venue }}{{ $parts = $parts | append (printf "<em>%s</em>" (htmlEscape .)) }}{{ end }}
+{{ with $r.volume }}{{ $volume := printf "%v" . }}{{ with $r.number }}{{ $volume = printf "%s(%v)" $volume . }}{{ end }}{{ $parts = $parts | append (htmlEscape $volume) }}{{ else }}{{ with $r.number }}{{ $parts = $parts | append (printf "%s %v" (i18n "issue") . | htmlEscape) }}{{ end }}{{ end }}
+{{ with $r.pages | default $r.article_number }}{{ $parts = $parts | append (printf "%v" . | htmlEscape) }}{{ end }}
+{{ if .year }}{{ $parts = $parts | append (printf "%d" (int ($r.year | default (time.AsTime $r.date).Year))) }}{{ end }}
+{{ if $parts }}<p class="journal">{{ delimit $parts " · " | safeHTML }}</p>{{ end }}

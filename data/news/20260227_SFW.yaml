@@ -1,0 +1,18 @@
+id: 20260227_SFW
+date: 2026-02-27
+image_fit: contain
+image: news/20260227_SFW.png
+paper_ids:
+- 20260218_Yin_SA
+display:
+  visible: true
+  featured: true
+  home: true
+  order: 0
+  image: true
+date_precision: day
+links: []
+image_alt:
+  en: ''
+  zh: ''
+presentation_ids: []

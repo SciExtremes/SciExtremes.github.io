@@ -1,0 +1,9 @@
+{{/* The caller selects and orders records; each year appears once. */}}
+{{ $years := slice }}
+{{ range .items }}{{ $years = $years | append (int (.record.year | default (time.AsTime .date).Year)) }}{{ end }}
+{{ range $year := sort ($years | uniq) "value" "desc" }}
+  <section class="year-group" id="year-{{ . }}">
+    <h2 class="year-heading">{{ . }}</h2>
+    <div>{{ range $.items }}{{ if eq (int (.record.year | default (time.AsTime .date).Year)) $year }}{{ partial $.template . }}{{ end }}{{ end }}</div>
+  </section>
+{{ end }}

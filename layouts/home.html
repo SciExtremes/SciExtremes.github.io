@@ -1,0 +1,25 @@
+{{ define "main" }}
+  {{ $intro := index hugo.Data.focus .Site.Language.Lang }}
+  {{ $hero := resources.Get (printf "images/%s" hugo.Data.home.hero.image) }}
+  <section class="hero" aria-labelledby="hero-title">
+    <picture class="hero-picture">
+      <img src="{{ ($hero.Resize "1920x webp").RelPermalink }}" srcset="{{ ($hero.Resize "960x webp").RelPermalink }} 960w, {{ ($hero.Resize "1920x webp").RelPermalink }} 1920w" sizes="100vw" alt="" width="{{ $hero.Width }}" height="{{ $hero.Height }}" fetchpriority="high" style="--hero-position: {{ hugo.Data.home.hero.position }}; --hero-position-mobile: {{ hugo.Data.home.hero.mobile_position }}">
+    </picture>
+    <div class="container hero-copy">
+      <h1 id="hero-title" data-pagefind-meta="title">{{ range $index, $word := $intro.words }}{{ if $index }}<span class="hero-dot" aria-hidden="true"> · </span>{{ end }}<span class="hero-word">{{ $word }}</span>{{ end }}</h1>
+      <p class="hero-summary">{{ $intro.introduction }}</p>
+      <div class="hero-actions">{{ partial "action-group.html" (slice (dict "url" ("research/" | relLangURL) "label" "exploreResearch") (dict "url" hugo.Data.profile.cv "label" "viewCV")) }}</div>
+    </div>
+    <a class="hero-credit" href="{{ hugo.Data.home.hero.source_url }}">{{ index hugo.Data.home.hero.source_label .Site.Language.Lang }}</a>
+  </section>
+  {{/* Select shared records in narrative order; every output uses the same feature component. */}}
+  {{ $index := 0 }}
+  {{ range $section := slice "publications" "data" "presentations" "news" }}
+    {{ $list := cond (eq $section "publications") "publication-items.html" "items.html" }}
+    {{ $items := where (partial $list (dict "site" $.Site "section" $section)) "record.display.home" true }}
+    {{ range $items }}
+      {{ partial "feature.html" (merge . (dict "home" true "surface" (eq (mod $index 2) 0))) }}
+      {{ $index = add $index 1 }}
+    {{ end }}
+  {{ end }}
+{{ end }}

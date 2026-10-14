@@ -1,0 +1,25 @@
+title: SciExtremes
+baseURL: https://sciextremes.github.io/
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+hasCJKLanguage: true
+enableRobotsTXT: true
+disableDefaultLanguageRedirect: true
+disableKinds:
+- taxonomy
+- term
+outputs:
+  home:
+  - HTML
+  - RSS
+  section:
+  - HTML
+  - RSS
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false
+imaging:
+  quality: 85

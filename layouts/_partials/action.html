@@ -1,0 +1,7 @@
+{{/* action-group chooses the primary action; this component owns URL handling and button markup. */}}
+{{ $href := .url }}
+{{/* Page URLs already contain the base path; static downloads need it added once. */}}
+{{ if and (strings.HasPrefix $href "/") (not (strings.HasPrefix $href (urls.Parse site.BaseURL).Path)) }}
+  {{ $href = $href | strings.TrimPrefix "/" | relURL }}
+{{ end }}
+<a class="button{{ if .primary }} button-primary{{ end }}" href="{{ $href }}"{{ if .download }} download{{ end }}>{{ i18n .label | default .label }}{{ with .name }} · {{ index . site.Language.Lang }}{{ end }}</a>

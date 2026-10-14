@@ -1,0 +1,16 @@
+<header class="site-header" data-pagefind-ignore>
+  <div class="container header-inner">
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}">{{ (index hugo.Data.profile .Site.Language.Lang).name }}</a>
+    <nav id="primary-nav" class="primary-nav" aria-label="{{ i18n "menu" }}">
+      {{ $section := .Section }}{{ if eq .Type "about" }}{{ $section = "about" }}{{ end }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" {{ if eq $section .Identifier }}aria-current="page"{{ end }}>{{ i18n .Identifier }}</a>
+      {{ end }}
+    </nav>
+    <div class="header-tools">
+      <button class="icon-button" data-search-open aria-label="{{ i18n "search" }}">{{ partial "icon.html" "search" }}</button>
+      {{ range .Translations }}<a class="language-link" href="{{ .RelPermalink }}" lang="{{ .Site.Language.Locale }}" aria-label="{{ i18n "language" }}: {{ .Site.Language.Label }}">{{ if eq .Site.Language.Lang "zh" }}中文{{ else }}EN{{ end }}</a>{{ end }}
+      <button class="icon-button menu-button" id="menu-toggle" aria-label="{{ i18n "menu" }}" aria-expanded="false" aria-controls="primary-nav">{{ partial "icon.html" "menu" }}</button>
+    </div>
+  </div>
+</header>

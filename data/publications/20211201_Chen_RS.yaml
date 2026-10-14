@@ -1,0 +1,32 @@
+id: 20211201_Chen_RS
+title: Contribution of Changes in Snow Cover Extent to Shortwave Radiation Perturbations at the Top of
+  the Atmosphere over the Northern Hemisphere during 2000–2019
+authors:
+- Xiaona Chen
+- Yaping Yang
+- Cong Yin
+journal: Remote Sensing
+date: '2021-12-04'
+doi: 10.3390/rs13234938
+volume: '13'
+number: '23'
+pages: '4938'
+links:
+- label: URL
+  url: https://www.mdpi.com/2072-4292/13/23/4938
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: false
+  media: true
+  attention: true
+year: 2021
+date_precision: day
+image: ''
+image_fit: contain
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

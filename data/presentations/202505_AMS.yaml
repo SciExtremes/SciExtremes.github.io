@@ -1,0 +1,21 @@
+id: 202505_AMS
+date: '2025-05-01'
+date_precision: month
+event: 2025 AMS Denver Summit
+location: Denver, United States
+kind: poster
+paper_ids:
+- 20260218_Yin_SA
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: false
+image: ''
+image_fit: contain
+links: []
+image_alt:
+  en: ''
+  zh: ''
+event_url: ''

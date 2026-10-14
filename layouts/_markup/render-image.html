@@ -1,0 +1,4 @@
+{{ $src := .Destination }}{{ $image := dict }}
+{{ if strings.HasPrefix $src "/images/" }}{{ $image = partial "image-data.html" (dict "path" (strings.TrimPrefix "/images/" $src)) }}{{ end }}
+{{ if $image }}{{ $src = $image.src }}{{ else }}{{ $src = partial "site-url.html" $src }}{{ end }}
+<img src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy"{{ if $image.width }} width="{{ $image.width }}" height="{{ $image.height }}"{{ end }}>

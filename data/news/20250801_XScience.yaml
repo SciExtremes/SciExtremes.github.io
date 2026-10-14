@@ -1,0 +1,17 @@
+id: 20250801_XScience
+date: 2025-08-01
+image_fit: contain
+image: news/20250801_XScience.png
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+date_precision: day
+links: []
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''
+presentation_ids: []

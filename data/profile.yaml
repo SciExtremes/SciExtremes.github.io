@@ -1,0 +1,78 @@
+cv: /uploads/resume.pdf
+links:
+- label: Email
+  url: mailto:congyin@ucmerced.edu
+  languages:
+  - en
+  - zh
+- label: Google Scholar
+  url: https://scholar.google.com/citations?hl=en&user=PVEiSDIAAAAJ&view_op=list_works&sortby=pubdate
+  languages:
+  - en
+- label: LinkedIn
+  url: https://www.linkedin.com/in/cong-yin-0812912a1/
+  languages:
+  - en
+- label: ResearchGate
+  url: https://www.researchgate.net/profile/Cong-Yin-3
+  languages:
+  - zh
+- label: ORCID
+  url: https://orcid.org/0009-0003-8618-9659
+  languages:
+  - zh
+en:
+  name: Cong Yin
+  role: Postdoctoral Scientist
+zh:
+  name: 殷聪
+  role: 博士后研究员
+affiliation:
+  url: https://directory.ucmerced.edu/person/congyin
+  name:
+    en: University of California, Merced
+    zh: 加利福尼亚大学默塞德分校
+education:
+- degree:
+    en: PhD in Geographic Information Science
+    zh: 博士，地图学与地理信息系统
+  institution:
+    en: University of Chinese Academy of Sciences
+    zh: 中国科学院大学
+  start: 2018-09-01
+  end: 2024-06-30
+- degree:
+    en: Visiting PhD, Climate Dynamics
+    zh: 联合培养博士，气候动力学
+  institution:
+    en: Columbia University
+    zh: 哥伦比亚大学
+  start: 2023-04-01
+  end: '2024-06-30'
+- degree:
+    en: BSc, Land Resources Management
+    zh: 学士，土地资源管理
+  institution:
+    en: Chang’an University
+    zh: 长安大学
+  start: 2014-09-01
+  end: 2018-06-30
+portrait: profile/cong-yin.png
+experience:
+- role:
+    en: Postdoctoral Scientist
+    zh: 博士后研究员
+  institution:
+    en: University of California, Merced
+    zh: 加利福尼亚大学默塞德分校
+  start: '2024-08-01'
+  end: null
+  supervisor:
+    en: Prof. John T. Abatzoglou
+    zh: John T. Abatzoglou 教授
+  supervisor_url: https://engineering.ucmerced.edu/content/john-abatzoglou
+  units:
+  - name: Earth Institute
+    url: https://earth.ucmerced.edu/
+  - name: Climatology Lab
+    url: https://www.climatologylab.org/

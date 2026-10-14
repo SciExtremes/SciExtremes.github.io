@@ -1,0 +1,10 @@
+{{/* Education and appointments share chronology, typography, and localization. */}}
+<ol class="timeline">
+  {{ range .items }}<li>
+    <span class="timeline-date">{{ (time.AsTime .start).Format (index site.Params.monthFormat site.Language.Lang) }} – {{ if .end }}{{ (time.AsTime .end).Format (index site.Params.monthFormat site.Language.Lang) }}{{ else }}{{ i18n "present" }}{{ end }}</span>
+    <strong>{{ index (index . $.field) site.Language.Lang }}</strong>
+    <span>{{ index .institution site.Language.Lang }}</span>
+    {{ with .units }}<span>{{ range $index, $unit := . }}{{ if $index }} | {{ end }}<a href="{{ $unit.url }}">{{ $unit.name }}</a>{{ end }}</span>{{ end }}
+    {{ if .supervisor }}<span>{{ i18n "supervisor" }}: {{ if .supervisor_url }}<a href="{{ .supervisor_url }}">{{ index .supervisor site.Language.Lang }}</a>{{ else }}{{ index .supervisor site.Language.Lang }}{{ end }}</span>{{ end }}
+  </li>{{ end }}
+</ol>

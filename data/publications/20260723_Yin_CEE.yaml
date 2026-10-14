@@ -1,0 +1,34 @@
+id: 20260723_Yin_CEE
+title: Fire weather waves drive extreme fires globally
+authors:
+- Cong Yin
+- John T. Abatzoglou
+- Piyush Jain
+- Mojtaba Sadegh
+- Mike D. Flannigan
+- Matthew W. Jones
+journal: Communications Earth & Environment
+date: '2026-07-23'
+doi: 10.1038/s43247-026-03858-5
+image: publications/20260723_Yin_CEE.png
+display:
+  visible: true
+  featured: true
+  home: true
+  order: 20
+  image: true
+  media: true
+  attention: true
+year: 2026
+links:
+- label: PDF
+  url: https://ueaeprints.uea.ac.uk/id/eprint/104058/1/s43247-026-03858-5_reference.pdf
+date_precision: day
+image_fit: contain
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''
+volume: ''
+number: ''
+pages: ''

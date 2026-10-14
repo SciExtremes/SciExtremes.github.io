@@ -1,0 +1,29 @@
+{{ define "main" }}
+  {{ $record := partial "record.html" . }}
+  <article class="container detail-page">
+    <header class="detail-heading">
+      <p class="eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ i18n .Section }}</a></p>
+      {{ if or (eq .Section "news") (eq .Section "presentations") }}{{ partial "record-meta.html" $record }}{{ end }}
+      <h1 data-pagefind-meta="title">{{ partial "title.html" . }}</h1>
+      {{ with $record.name }}<p class="feature-subtitle">{{ . }}</p>{{ end }}
+      {{ with $record.location_label }}<p class="muted">{{ index . site.Language.Lang }}</p>{{ else }}{{ with $record.location }}<p class="muted">{{ . }}</p>{{ end }}{{ end }}
+      {{ if eq .Section "data" }}{{ partial "resource-meta.html" $record }}{{ end }}
+      {{ with .Params.summary }}<p class="muted">{{ . }}</p>{{ end }}
+      {{ $actions := $record.links | default slice }}
+      {{ if eq .Section "data" }}{{ $actions = partial "resource-actions.html" (dict "record" $record "page" .) }}{{ end }}
+      {{ with $record.event_url }}{{ $actions = $actions | append (dict "url" . "label" "event") }}{{ end }}
+      {{ partial "action-group.html" $actions }}
+    </header>
+    <div class="detail-content">
+      <div class="prose">{{ .Content }}</div>
+      {{ if and $record.display.image $record.image }}<div class="detail-visual">{{ partial "figure.html" (dict "image" $record.image "caption" .Params.image_caption "title" (partial "title.html" .) "alt" (index $record.image_alt site.Language.Lang)) }}</div>{{ end }}
+    </div>
+    {{ partial "related-links.html" (dict "section" "publications" "ids" $record.paper_ids "heading" "relatedPapers" "anchor" "related-papers") }}
+    {{ partial "related-links.html" (dict "section" "presentations" "ids" $record.presentation_ids "heading" "relatedPresentations" "anchor" "related-presentations") }}
+    {{ if eq .Section "presentations" }}{{ partial "related-content.html" (dict "page" . "id" $record.id "field" "presentation_ids" "sections" (slice "news")) }}{{ end }}
+    {{ if eq .Section "data" }}
+      {{ with $record.citation }}<section class="related-section" id="resource-citation"><h2>{{ i18n "citation" }}</h2><p>{{ delimit .authors ", " }} ({{ .year }}). {{ .title }}.{{ with .publisher }} {{ . }}.{{ end }}{{ with $record.version }} {{ i18n "version" }} {{ . }}.{{ end }}</p></section>{{ end }}
+      {{ partial "related-links.html" (dict "section" "data" "ids" $record.related_version_ids "heading" "relatedVersions" "anchor" "related-versions") }}
+    {{ end }}
+  </article>
+{{ end }}

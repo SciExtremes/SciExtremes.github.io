@@ -1,0 +1,7 @@
+{{/* Scientific figures and software interfaces are fitted, never cropped. Photos may opt into cover. */}}
+{{ $record := .record }}
+{{ if and $record.display.image $record.image }}
+  {{ with partial "image-data.html" (dict "path" $record.image) }}
+    <img class="record-image {{ if eq $record.image_fit "cover" }}image-cover{{ else }}image-contain{{ end }}" src="{{ .src }}"{{ with .srcset }} srcset="{{ . }}" sizes="(max-width: 760px) 100vw, 50vw"{{ end }} alt="{{ (index $record.image_alt site.Language.Lang) | default $.title }}" loading="lazy"{{ if .width }} width="{{ .width }}" height="{{ .height }}"{{ end }}>
+  {{ end }}
+{{ end }}

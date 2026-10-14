@@ -1,0 +1,52 @@
+{{/* Shared text serves every viewport; connection labels own intrinsic grid columns. */}}
+{{ $f := hugo.Data.framework }}{{ $lang := .Site.Language.Lang }}
+{{ $layout := hugo.Data.research_layout }}
+<figure class="research-framework" aria-labelledby="framework-title" aria-describedby="framework-caption">
+  <h2 id="framework-title">{{ index $f.title $lang }}</h2>
+  <p class="framework-introduction">{{ index $f.description $lang }}</p>
+  <div class="framework-layout">
+    <div class="framework-controls">
+      <div class="framework-context">
+        <span>{{ index $f.context $lang }}</span>
+        <svg viewBox="0 0 240 150" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="hydro-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z"/></marker></defs><path d="M88 148 C88 52 118 52 238 52" marker-end="url(#hydro-tip)"/></svg>
+      </div>
+      <div class="framework-grouped-modifiers">{{ range first $layout.modifier_group_size $f.modifiers }}{{ partial "framework-modifier.html" (dict "item" . "lang" $lang) }}{{ end }}</div>
+      {{ range after $layout.modifier_group_size $f.modifiers }}{{ partial "framework-modifier.html" (dict "item" . "lang" $lang "terminal" true) }}{{ end }}
+    </div>
+    <div class="framework-stages">
+      {{ range $index, $stage := $f.stages }}
+        {{ $style := index $layout.stages $index }}
+        {{ with .relation }}<div class="framework-relation{{ if $style.modulated }} framework-modulator{{ end }}" aria-hidden="true"><span class="framework-process-arrow"></span><span class="framework-relation-label">{{ index . $lang }}</span></div>{{ end }}
+        <div class="framework-stage framework-tone-{{ $style.tone }}">
+          {{ with .relation }}<span class="framework-inline-relation" aria-hidden="true">{{ index . $lang }}</span>{{ end }}
+          <h3>{{ index .title $lang }}</h3>
+          {{ partial "framework-questions.html" . }}
+          {{ partial "framework-icon.html" $style.icon }}
+          <dl>
+            {{ range .terms }}
+              {{ $term := . }}
+              {{ $papers := partial "related-pages.html" (dict "section" "publications" "ids" (slice .paper_id)) }}
+              <div>
+                <dt>{{ if $papers }}{{ range $papers }}<a class="framework-paper-link" href="{{ .RelPermalink }}" title="{{ partial "title.html" . }}" aria-label="{{ printf (i18n "frameworkPaper") (index $term.label $lang) (partial "title.html" .) }}">{{ index $term.label $lang }} <span class="framework-paper-icon" aria-hidden="true">↗</span></a>{{ end }}{{ else }}{{ index .label $lang }}{{ end }}</dt>
+                <dd>{{ index .detail $lang }}</dd>
+              </div>
+            {{ end }}
+          </dl>
+        </div>
+      {{ end }}
+    </div>
+    <div class="framework-foundation">
+      {{ range $index, $item := $f.foundation }}
+        <div style="grid-column: {{ add (mul $index 2) 1 }}">
+          <h3>{{ index .title $lang }}</h3>
+          {{ with .label }}<strong>{{ index . $lang }}</strong>{{ end }}
+          {{ with .resource_ids }}<p class="framework-resources">{{ range $i, $id := . }}{{ if $i }} · {{ end }}{{ $resource := index hugo.Data.resources $id }}{{ $page := site.GetPage (printf "/data/%s" $id) }}{{ if $resource.display.visible }}<a href="{{ $page.RelPermalink }}">{{ $resource.name }}</a>{{ else }}{{ $resource.name }}{{ end }}{{ end }}</p>{{ end }}
+          {{ with .lines }}<p>{{ range $i, $line := . }}{{ if $i }}<br>{{ end }}{{ index $line $lang }}{{ end }}</p>{{ end }}
+          {{ with .note }}<p class="framework-note">{{ index . $lang }}</p>{{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="framework-legend" aria-hidden="true"><span>{{ index $f.legend.process $lang }}</span><span>{{ index $f.legend.support $lang }}</span></div>
+  <figcaption id="framework-caption">{{ index $f.caption $lang }}</figcaption>
+</figure>

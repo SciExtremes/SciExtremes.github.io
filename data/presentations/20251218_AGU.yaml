@@ -1,0 +1,23 @@
+id: 20251218_AGU
+date: '2025-12-18'
+event: AGU 2025
+event_url: https://agu.confex.com/agu/agu25/meetingapp.cgi/Paper/1905609
+location: New Orleans Ernest N. Morial Convention Center, New Orleans, United States
+kind: poster
+paper_ids:
+- 20260723_Yin_CEE
+links:
+- label: posterPDF
+  url: /uploads/20251218_AGU.pdf
+image: presentations/20251218_AGU.jpg
+image_fit: cover
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

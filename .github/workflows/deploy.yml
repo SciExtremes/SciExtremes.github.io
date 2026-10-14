@@ -1,0 +1,75 @@
+name: Validate and deploy Hugo
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      # Use the repository's actual Pages address for both production and preview.
+      - uses: actions/configure-pages@v5
+        id: pages
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.161.1'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Install pinned build tools
+        run: |
+          npm ci --ignore-scripts
+          python -m pip install -r requirements.txt
+      - name: Check documentation links
+        run: npm run check:docs
+      - name: Validate source content
+        run: python scripts/validate_content.py
+      - name: Test content model
+        run: python scripts/test_content.py
+      - name: Test navigation, search and conditional attention badges
+        run: node --test scripts/test_interactions.mjs
+      - name: Build supported content scenarios
+        run: npm run check:scenarios
+      - name: Test alternate site configuration
+        run: npm run check:template
+      - name: Build Hugo and local search index
+        env:
+          HUGO_BASEURL: '${{ steps.pages.outputs.base_url }}/'
+        run: npm run build
+      - name: Check internal links, translations, and downloadable resources
+        run: python scripts/check_links.py public
+      - name: Install Chromium for responsive checks
+        run: npx playwright install --with-deps chromium
+      - name: Check actual rendering and interactions
+        run: npm run check:browser
+      # Pull requests validate the same build but never publish it.
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          path: public
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

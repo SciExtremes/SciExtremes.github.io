@@ -1,0 +1,19 @@
+{{/* Decorative concept symbols encode no measurements. */}}
+<svg class="framework-icon" viewBox="0 0 140 120" aria-hidden="true">
+  <circle class="framework-icon-disc" cx="70" cy="62" r="48"/>
+  {{ if eq . "globe" }}
+    <g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="62" cy="62" r="32"/><ellipse cx="62" cy="62" rx="13" ry="32"/><ellipse cx="62" cy="62" rx="24" ry="32"/><path d="M30 62H94M35 45H89M35 79H89"/></g>
+    <circle cx="104" cy="33" r="10" fill="#e3ae53"/><path d="M104 14v5m0 28v5m-19-19h5m28 0h5m-33-14 4 4m20 20 4 4m0-28-4 4m-20 20-4 4" stroke="#d4a352" fill="none"/>
+  {{ else if eq . "cloud" }}
+    <circle cx="53" cy="47" r="20" fill="#ffedc9" stroke="#cf9a48" stroke-width="1.5"/>
+    <path d="M47 78C26 78 30 49 48 50C51 24 90 28 94 52C117 49 120 78 100 78Z" fill="#fffaf2" stroke="currentColor" stroke-width="1.7"/>
+    <path d="M36 91H96m-49 9h37" stroke="currentColor" fill="none" stroke-width="1.7"/>
+  {{ else if eq . "forest" }}
+    <g fill="#e5eee3" stroke="#789776" stroke-width="1.3"><path d="M30 86V65m29 21V52m27 34V64"/><path d="M16 69 30 39 44 69Zm28-11 15-35 15 35Zm29 13 14-30 14 30Z"/></g>
+    <path d="M105 93C69 93 78 69 96 45C97 66 116 68 120 80C123 91 113 94 105 93Z" fill="#cb8060" stroke="#b16b52" stroke-width="1.2"/>
+    <path d="m94 86 8-16 9 16Z" fill="#fff0d2"/><path d="M101 40c-10-10 8-16 0-26m12 26c-10-10 8-16 0-26" fill="none" stroke="#97a4af"/>
+  {{ else }}
+    <g fill="#f1f3f8" stroke="currentColor" stroke-width="1.5"><path d="M29 90V63h20v27m8 0V48h21v42m8 0V57h20v33M24 92h87"/><path d="M33 39H104M33 29H104" stroke="#9aa7b6"/><path d="m115 61 18 12-18 14Z"/><circle cx="115" cy="61" r="3"/><circle cx="133" cy="73" r="3"/><circle cx="115" cy="87" r="3"/></g>
+  {{ end }}
+</svg>
+

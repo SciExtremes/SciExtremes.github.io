@@ -1,0 +1,14 @@
+# Shared bilingual homepage keywords and introduction.
+en:
+  words:
+  - Climate
+  - Fire
+  - Data
+  introduction: I am a climate scientist studying wildfires and climate extremes using hydroclimatic,
+    data-driven, and geostatistical approaches.
+zh:
+  words:
+  - 气候
+  - 野火
+  - 数据
+  introduction: 我是一名气候科学研究者，运用水文气候分析、数据驱动与地统计方法，研究野火和气候极端事件。

@@ -1,0 +1,8 @@
+hero:
+  image: hero/camp-fire.jpg
+  position: center 38%
+  mobile_position: 74% 28%
+  source_url: https://science.nasa.gov/earth/earth-observatory/camp-fire-rages-in-california-144225/
+  source_label:
+    en: NASA Earth Observatory
+    zh: NASA Earth Observatory

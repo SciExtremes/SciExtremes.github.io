@@ -1,0 +1,20 @@
+id: 20220516_GATHW
+date: '2021-05-15'
+paper_ids:
+- 20220516_Yin_GDJ
+image: data/20220516_GATHW.png
+links:
+- label: accessData
+  url: https://doi.org/10.5281/zenodo.4764325
+image_fit: contain
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 30
+  image: true
+name: GATHW
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

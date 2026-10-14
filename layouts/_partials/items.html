@@ -1,0 +1,10 @@
+{{/* Stable date order is the default; a positive order pins entries ahead of automatic ones. */}}
+{{ $items := slice }}
+{{ range where .site.RegularPages "Section" .section }}
+  {{ $record := partial "record.html" . }}
+  {{ if and $record $record.display.visible }}
+    {{ $summary := .Params.summary | default .Description }}
+    {{ $items = $items | append (dict "page" . "record" $record "title" (partial "title.html" .) "summary" $summary "date" $record.date) }}
+  {{ end }}
+{{ end }}
+{{ return (partial "sort-items.html" (dict "items" $items)) }}

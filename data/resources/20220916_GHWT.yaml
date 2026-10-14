@@ -1,0 +1,20 @@
+id: 20220916_GHWT
+date: '2021-11-24'
+paper_ids:
+- 20220916_Yin_CRM
+image: data/20220916_GHWT.png
+links:
+- label: accessData
+  url: https://doi.org/10.6084/m9.figshare.17075660.v6
+image_fit: contain
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 20
+  image: true
+name: GHWT
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

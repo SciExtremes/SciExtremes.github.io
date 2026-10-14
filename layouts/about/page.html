@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ $profile := index hugo.Data.profile .Site.Language.Lang }}
+  {{ partial "page-heading.html" . }}
+  <section class="container about-grid">
+    <div class="profile-card">
+      {{ with resources.Get (printf "images/%s" hugo.Data.profile.portrait) }}{{ $image := .Fit "640x640 webp" }}<img class="portrait" src="{{ $image.RelPermalink }}" alt="{{ $profile.name }}" width="{{ $image.Width }}" height="{{ $image.Height }}">{{ end }}
+      <h2>{{ $profile.name }}</h2>
+      <p class="about-role">{{ $profile.role }}<br><a href="{{ hugo.Data.profile.affiliation.url }}">{{ index hugo.Data.profile.affiliation.name .Site.Language.Lang }}</a></p>
+    </div>
+    <div class="about-copy">
+      <div class="prose">{{ .Content }}</div>
+      <ul class="social-links" aria-label="{{ i18n "profileLinks" }}">
+        {{ range hugo.Data.profile.links }}{{ if or (not .languages) (in .languages site.Language.Lang) }}<li><a href="{{ .url }}">{{ i18n .label | default .label }}</a></li>{{ end }}{{ end }}
+      </ul>
+      {{ partial "action-group.html" (slice (dict "url" hugo.Data.profile.cv "label" "viewCV")) }}
+    </div>
+  </section>
+  <section class="about-background"><div class="container about-lower">
+    <div><h2>{{ i18n "education" }}</h2>{{ partial "timeline.html" (dict "items" hugo.Data.profile.education "field" "degree") }}</div>
+    <div><h2>{{ i18n "experience" }}</h2>{{ partial "timeline.html" (dict "items" hugo.Data.profile.experience "field" "role") }}</div>
+  </div></section>
+{{ end }}

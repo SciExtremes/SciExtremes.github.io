@@ -1,0 +1,24 @@
+id: 20251110_SNRI
+date: '2025-11-10'
+event: Environmental Systems Seminar
+event_url: https://es.ucmerced.edu/previous-speakers
+location: COB2 140, Merced, United States
+kind: seminar
+paper_ids:
+- 20260218_Yin_SA
+- 20260723_Yin_CEE
+links:
+- label: slidesPDF
+  url: /uploads/20251110_SNRI.pdf
+image: presentations/20251110_SNRI.png
+image_fit: contain
+display:
+  visible: true
+  featured: true
+  home: true
+  order: 0
+  image: true
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

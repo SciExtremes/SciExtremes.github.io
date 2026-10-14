@@ -1,0 +1,196 @@
+skip:
+  other: Skip to content
+search:
+  other: Search
+close:
+  other: Close
+menu:
+  other: Menu
+publications:
+  other: Publications
+research:
+  other: Research
+data:
+  other: Data
+presentations:
+  other: Presentations
+news:
+  other: News
+about:
+  other: About
+education:
+  other: Education
+details:
+  other: Details
+abstract:
+  other: Abstract
+media:
+  other: Media coverage
+relatedPapers:
+  other: Related papers
+relatedPresentations:
+  other: Related presentations
+relatedNews:
+  other: Related news
+cite:
+  other: Cite
+searchHint:
+  other: Search research, publications, data, presentations, and news.
+searchUnavailable:
+  other: Search is unavailable. Please browse the section pages.
+poster:
+  other: Poster
+seminar:
+  other: Seminar
+lightning:
+  other: Lightning talk
+event:
+  other: Event
+notFound:
+  other: Page not found
+notFoundBody:
+  other: Return home or use search to find research and resources.
+home:
+  other: Home
+language:
+  other: Language
+paper:
+  other: Paper
+PDF:
+  other: PDF
+Data:
+  other: Data
+URL:
+  other: Access
+accessData:
+  other: Access data
+posterPDF:
+  other: View poster PDF
+slidesPDF:
+  other: View slides PDF
+featured:
+  other: Featured
+highlights:
+  other: Highlights
+exploreResearch:
+  other: Explore research
+readPaper:
+  other: Read paper
+Email:
+  other: Email
+Google Scholar:
+  other: Google Scholar
+ORCID:
+  other: ORCID
+experience:
+  other: Experience
+present:
+  other: Present
+supervisor:
+  other: Supervisor
+allData:
+  other: All data
+allPresentations:
+  other: All presentations
+allNews:
+  other: All news
+readStory:
+  other: Read story
+relatedData:
+  other: Related data
+Code:
+  other: Code
+dataCode:
+  other: Data & code
+allPublications:
+  other: All publications
+profileLinks:
+  other: Profile links
+sectionFilter:
+  other: Section
+viewCV:
+  other: View CV
+scientificQuestions:
+  other: Scientific questions
+attentionLoading:
+  other: Altmetric score is loading
+attentionEmpty:
+  other: No Altmetric score is available
+attentionUnavailable:
+  other: Altmetric score could not be loaded
+LinkedIn:
+  other: LinkedIn
+ResearchGate:
+  other: ResearchGate
+representativeWork:
+  other: Representative work
+researchQuestionsIntro:
+  other: Three interconnected questions organize my research, from climate extremes to wildfire behavior
+    and societal risks.
+relatedQuestions:
+  other: Related scientific questions
+questionSignificanceObjectives:
+  other: Significance & objectives
+questionApproachProgress:
+  other: Approach & progress
+questionNextSteps:
+  other: Next steps
+frameworkPaper:
+  other: 'Read paper on %s: %s'
+
+oral:
+  other: Oral presentation
+other:
+  other: Other
+online:
+  other: Online
+hybrid:
+  other: Hybrid
+invitedPresentation:
+  other: Invited %s
+keynotePresentation:
+  other: Keynote presentation
+publicationType_conference:
+  other: Conference paper
+publicationType_preprint:
+  other: Preprint
+publicationType_chapter:
+  other: Book chapter
+publicationType_report:
+  other: Report
+publicationStatus_online_first:
+  other: Online first
+publicationStatus_accepted:
+  other: Accepted
+equalContribution:
+  other: Equal contribution
+correspondingAuthor:
+  other: Corresponding author
+relatedVersions:
+  other: Related versions
+issue:
+  other: Issue
+version:
+  other: Version
+updated:
+  other: Updated
+citation:
+  other: Citation
+resourceType_dataset:
+  other: Dataset
+resourceType_code:
+  other: Code
+resourceType_software:
+  other: Software
+resourceType_tool:
+  other: Online tool
+resourceType_other:
+  other: Resource
+recording:
+  other: Recording
+documentation:
+  other: Documentation
+demo:
+  other: Demo
+supplement:
+  other: Supplement

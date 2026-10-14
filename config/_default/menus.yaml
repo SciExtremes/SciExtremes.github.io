@@ -1,0 +1,19 @@
+main:
+- identifier: research
+  pageRef: /research
+  weight: 10
+- identifier: publications
+  pageRef: /publications
+  weight: 20
+- identifier: data
+  pageRef: /data
+  weight: 30
+- identifier: presentations
+  pageRef: /presentations
+  weight: 40
+- identifier: news
+  pageRef: /news
+  weight: 50
+- identifier: about
+  pageRef: /about
+  weight: 60

@@ -1,0 +1,6 @@
+{{ $src := .Get "src" }}
+{{ if strings.HasPrefix $src "/images/" }}
+  {{ partial "figure.html" (dict "image" (strings.TrimPrefix "/images/" $src) "alt" (.Get "alt") "caption" (.Get "caption") "title" (.Get "alt")) }}
+{{ else }}
+  <figure class="content-figure"><img src="{{ partial "site-url.html" $src | safeURL }}" alt="{{ .Get "alt" }}" loading="lazy">{{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>
+{{ end }}

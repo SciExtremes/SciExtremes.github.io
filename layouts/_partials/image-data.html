@@ -1,0 +1,14 @@
+{{/* Raster photos are resized; SVG and GIF retain their original vector/animation. */}}
+{{ $result := dict }}
+{{ with resources.Get (printf "images/%s" .path) }}
+  {{ $ext := lower (path.Ext .Name) }}
+  {{ if eq $ext ".svg" }}
+    {{ $result = dict "src" .RelPermalink "srcset" "" "width" 0 "height" 0 }}
+  {{ else if eq $ext ".gif" }}
+    {{ $result = dict "src" .RelPermalink "srcset" "" "width" .Width "height" .Height }}
+  {{ else }}
+    {{ $small := .Resize "640x webp" }}{{ $large := .Resize "1280x webp" }}
+    {{ $result = dict "src" $large.RelPermalink "srcset" (printf "%s 640w, %s 1280w" $small.RelPermalink $large.RelPermalink) "width" $large.Width "height" $large.Height }}
+  {{ end }}
+{{ end }}
+{{ return $result }}

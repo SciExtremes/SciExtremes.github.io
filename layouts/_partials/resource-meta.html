@@ -1,0 +1,6 @@
+{{ $parts := slice }}
+{{ with .resource_type }}{{ $parts = $parts | append (i18n (printf "resourceType_%s" .)) }}{{ end }}
+{{ with .version }}{{ $parts = $parts | append (printf "%s %v" (i18n "version") .) }}{{ end }}
+{{ with .license }}{{ $parts = $parts | append . }}{{ end }}
+{{ if $parts }}<p class="muted resource-details">{{ delimit $parts " · " }}</p>{{ end }}
+{{ with .updated }}<p class="muted resource-details">{{ i18n "updated" }} · {{ partial "date.html" (dict "date" . "date_precision" "day") }}</p>{{ end }}

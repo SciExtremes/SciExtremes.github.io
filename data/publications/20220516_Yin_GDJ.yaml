@@ -1,0 +1,32 @@
+id: 20220516_Yin_GDJ
+title: Global near real-time daily apparent temperature and heat wave dataset
+authors:
+- Cong Yin
+- Yaping Yang
+- Xiaona Chen
+- Xiafang Yue
+- Yangxiaoyue Liu
+- Ying Xin
+journal: Geoscience Data Journal
+date: '2022-05-16'
+doi: 10.1002/gdj3.155
+volume: '10'
+number: '2'
+pages: 231--245
+image: publications/20220516_Yin_GDJ.jpg
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+  media: true
+  attention: true
+year: 2023
+date_precision: day
+image_fit: contain
+links: []
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

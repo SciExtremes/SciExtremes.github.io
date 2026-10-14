@@ -1,0 +1,8 @@
+{{/* Ordered actions have one primary operation; later actions use the same outline style. */}}
+{{ $actions := slice }}{{ $seen := slice }}
+{{ range . }}{{ if and .url (not (in $seen .url)) }}{{ $actions = $actions | append . }}{{ $seen = $seen | append .url }}{{ end }}{{ end }}
+{{ with $actions }}
+  <div class="resource-links action-group">
+    {{ range $index, $action := . }}{{ partial "action.html" (merge $action (dict "primary" (eq $index 0))) }}{{ end }}
+  </div>
+{{ end }}

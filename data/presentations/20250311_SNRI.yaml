@@ -1,0 +1,23 @@
+id: 20250311_SNRI
+date: '2025-03-11'
+event: 2025 SNRI Early Career Researcher Lightning Talks
+event_url: https://snri.ucmerced.edu/events/2025-lightning-talks
+location: UC Merced Conference Center, Merced, United States
+kind: lightning
+paper_ids:
+- 20260218_Yin_SA
+links:
+- label: slidesPDF
+  url: /uploads/20250311_SNRI.pdf
+image: presentations/20250311_SNRI.png
+image_fit: contain
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+date_precision: day
+image_alt:
+  en: ''
+  zh: ''

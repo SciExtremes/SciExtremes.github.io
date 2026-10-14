@@ -1,0 +1,12 @@
+# Root anchors keep generated resources separate from source data/resources.
+/public/
+/resources/
+/node_modules
+/.hugo_build.lock
+__pycache__/
+.DS_Store
+.env
+*.log
+
+/test-results/
+/playwright-report/

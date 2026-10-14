@@ -1,0 +1,32 @@
+id: 20250228_Yin_SD
+title: CETD, a global compound events detection and visualisation toolbox and dataset
+authors:
+- Cong Yin
+- Mingfang Ting
+- Kai Kornhuber
+- Radley M. Horton
+- Yaping Yang
+- Yelin Jiang
+journal: Scientific Data
+date: '2025-02-28'
+doi: 10.1038/s41597-025-04530-x
+volume: '12'
+number: '1'
+pages: '356'
+image: publications/20250228_Yin_SD.png
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+  media: true
+  attention: true
+year: 2025
+date_precision: day
+image_fit: contain
+links: []
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

@@ -1,0 +1,10 @@
+en:
+  contentDir: content/en
+  weight: 1
+  locale: en-US
+  label: English
+zh:
+  contentDir: content/zh
+  weight: 2
+  locale: zh-Hans
+  label: 简体中文

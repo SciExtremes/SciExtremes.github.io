@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ partial "page-heading.html" . }}
+  {{ if hugo.Data.research_layout.framework_enabled }}<section class="research-mechanism surface"><div class="container">{{ partial "research-framework.html" . }}</div></section>{{ end }}
+  <section class="container scientific-questions" aria-labelledby="questions-title">
+    <h2 id="questions-title">{{ i18n "scientificQuestions" }}</h2>
+    <p class="muted questions-introduction">{{ i18n "researchQuestionsIntro" }}</p>
+    {{ $paragraphLabels := hugo.Data.research_layout.paragraph_labels }}
+    {{ range hugo.Data.questions }}
+      <article class="scientific-question" id="{{ .id }}" aria-labelledby="{{ .id }}-title">
+        <p class="question-number">{{ .label | default (upper .id) }}</p>
+        <div class="question-copy">
+          <h3 id="{{ .id }}-title">{{ index .title site.Language.Lang }}</h3>
+          {{ range $index, $paragraph := index .paragraphs site.Language.Lang }}
+            <div class="question-block">
+              <h4 class="question-subheading">{{ i18n (index $paragraphLabels $index) }}</h4>
+              <p class="question-paragraph">{{ $paragraph }}</p>
+            </div>
+          {{ end }}
+          {{ partial "question-resources.html" . }}
+        </div>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}

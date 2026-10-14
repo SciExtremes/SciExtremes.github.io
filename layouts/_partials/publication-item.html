@@ -1,0 +1,19 @@
+<article class="publication" id="paper-{{ .record.id }}">
+  <div class="publication-grid"><div class="publication-main">
+    {{ if .record.display.featured }}<p class="eyebrow publication-featured">{{ i18n "featured" }} · {{ i18n "publications" }}</p>{{ end }}
+    <h3><a href="{{ .page.RelPermalink }}">{{ .record.title }}</a></h3>
+    {{ if and (eq site.Language.Lang "zh") .page.Params.translated_title }}<p class="translated-title">{{ .page.Params.translated_title }}</p>{{ end }}
+    <p class="authors">{{ partial "authors.html" .record }}</p>
+    {{ partial "author-roles.html" .record }}
+    {{ partial "publication-status.html" .record }}
+    {{ partial "publication-meta.html" . }}
+    {{ partial "publication-links.html" . }}
+    {{ if .record.display.media }}{{ with index hugo.Data.media .record.id }}
+      <div class="coverage-links"><span>{{ i18n "media" }}:</span>{{ range . }}<a href="{{ .url }}">{{ .outlet }} ↗</a>{{ end }}</div>
+    {{ end }}{{ end }}
+    {{ $news := partial "items.html" (dict "site" .page.Site "section" "news") }}
+    {{ $related := where $news "record.paper_ids" "intersect" (slice .record.id) }}
+    {{ range $related }}<a class="related-news-link" href="{{ .page.RelPermalink }}">{{ i18n "relatedNews" }} ›</a>{{ end }}
+  </div>{{ partial "image.html" . }}</div>
+  {{ partial "altmetric.html" .record }}
+</article>

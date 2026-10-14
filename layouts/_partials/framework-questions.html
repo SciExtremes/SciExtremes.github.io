@@ -1,0 +1,11 @@
+{{/* Framework links resolve question titles from the Research source. */}}
+{{ with .sq_ids }}
+  <nav class="framework-questions" aria-label="{{ i18n "relatedQuestions" }}">
+    {{ range . }}
+      {{ $id := . }}
+      {{ range where hugo.Data.questions "id" $id }}
+        <a href="{{ printf "research/#%s" .id | relLangURL }}" title="{{ index .title site.Language.Lang }}">{{ .label | default (upper .id) }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+{{ end }}

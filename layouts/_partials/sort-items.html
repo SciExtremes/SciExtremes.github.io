@@ -1,0 +1,17 @@
+{{/* Publications share year/feature/priority order across list and homepage views. */}}
+{{ $mode := .mode | default "section" }}
+{{ $items := slice }}
+{{ range .items }}
+  {{ $priority := .record.display.order }}
+  {{ $year := int (.record.year | default (time.AsTime .date).Year) }}
+  {{ $items = $items | append (merge . (dict "sortPinned" (gt $priority 0) "sortYear" $year)) }}
+{{ end }}
+{{ $items = sort $items "record.id" "asc" }}
+{{ $items = sort $items "date" "desc" }}
+{{ $items = sort $items "record.display.order" "asc" }}
+{{ $items = sort $items "sortPinned" "desc" }}
+{{ if eq $mode "publications" }}
+  {{ $items = sort $items "record.display.featured" "desc" }}
+  {{ $items = sort $items "sortYear" "desc" }}
+{{ end }}
+{{ return $items }}

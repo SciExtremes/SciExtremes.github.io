@@ -1,0 +1,90 @@
+# Three paragraphs: significance/objectives, methods/published progress, next steps.
+# Resource IDs are curated here; publication and data records do not store SQ associations.
+- id: sq1
+  title:
+    en: How do climate change and natural variability shape the intensity, persistence, and synchronicity
+      of climate extremes?
+    zh: 气候变化与自然变率如何共同影响极端气候事件的强度、持续性与同步性？
+  paragraphs:
+    en:
+    - Climate extremes can persist through time, affect multiple regions simultaneously, or combine different
+      hazards, creating pressures that single-event analyses may overlook. I aim to explain how climate
+      change and natural variability shape the intensity, persistence, and synchronicity of these events,
+      and how land–atmosphere interactions contribute to their development. This work examines heatwaves,
+      compound extremes, and fire weather within a common climate-science framework.
+    - Using observations, reanalysis, and climate simulations, I combine event-based analysis with statistical
+      and geospatial methods to characterize extremes and examine their drivers. Published work documents
+      increasing synchronicity of extreme fire weather and evaluates the contributions of climate change
+      and natural variability. Open heatwave datasets and a compound-event detection toolbox provide reproducible
+      foundations for comparing event characteristics and environmental responses.
+    - Building on these advances, my next steps are to investigate the mechanisms of concurrent and compound
+      extremes, including interactions among background warming, large-scale climate modes, and land-surface
+      conditions. The aim is to improve physical understanding and develop transferable approaches for
+      assessing evolving climate hazards across regions.
+    zh:
+    - 气候极端事件可能长期持续、在多个区域同期发生，或与其他灾害条件相互叠加，其影响往往超出单一事件分析的范围。我的研究旨在解释气候变化、自然变率和陆气相互作用如何影响极端事件的强度、持续性与同步性，将热浪、复合极端事件和火险天气纳入共同的气候科学研究框架。
+    - 我结合观测、再分析与气候模拟，运用基于事件的分析、统计与地理空间方法，刻画极端事件特征并研究其驱动机制。已发表工作揭示了极端火险天气同步性的增加，并分析气候变化与自然变率的作用；开放热浪数据集和复合事件识别工具为比较事件特征及环境响应提供了可复现基础。
+    - 下一步将进一步探索同期与复合极端事件的形成机制，关注背景增暖、大尺度气候模态与陆面条件之间的相互作用，深化对极端事件的物理理解，并发展适用于不同区域的气候风险分析方法。
+  paper_ids:
+  - 20260218_Yin_SA
+  - 20250228_Yin_SD
+  - 20220916_Yin_CRM
+  data_ids:
+  - 20250228_CETD
+- id: sq2
+  title:
+    en: Under what conditions does extreme fire weather contribute to extreme wildfires, and what controls
+      their behavior?
+    zh: 极端火险天气在何种条件下促成极端野火，其行为受哪些因素控制？
+  paragraphs:
+    en:
+    - The influence of extreme fire weather on wildfire activity varies with fuels, ignitions, and landscape
+      context. Understanding this variation is essential for interpreting why some fires become exceptionally
+      large, fast-spreading, or radiatively active. I aim to identify the conditions that favor extreme
+      fires and explain how environmental drivers shape their occurrence, growth, and behavior across
+      different regions and ecosystems.
+    - I link climate records with satellite observations and individual fire events, combining event-based
+      analyses, spatial comparisons, and statistical modeling. Published studies show how persistent fire
+      weather waves and heatwaves relate to wildfire activity. These findings establish a foundation for
+      examining how the timing and duration of fire-favorable conditions interact with local environmental
+      context, and for treating persistence, synchronicity, and fire behavior as complementary dimensions.
+    - My next steps are to develop multidimensional approaches to characterizing extreme wildfire behavior
+      and to investigate its environmental drivers using Earth observations and explainable modeling.
+      The goal is to better understand differences in fire size, spread speed, and radiative activity,
+      while evaluating how robust these relationships are across regions and ecosystems.
+    zh:
+    - 极端火险天气对野火活动的影响随可燃物、点火和景观条件而变化。理解这些差异，有助于解释为何部分野火表现出异常规模、快速蔓延或强烈辐射活动。我的研究旨在识别促成极端野火的条件，解释环境驱动因素如何影响不同区域与生态系统中的野火发生、增长和行为。
+    - 我连接气候记录、卫星观测与单次野火事件，综合开展基于事件的分析、空间比较和统计建模。已发表研究阐明了持续火险天气波、热浪与野火活动之间的联系，为探索有利火灾条件的出现时间和持续时长如何与局地环境共同作用提供了基础，并将持续性、同步性与野火行为作为互补的研究维度。
+    - 下一步将发展极端野火行为的多维表征方法，结合地球观测与可解释建模研究其环境驱动机制，进一步理解野火规模、蔓延速度和辐射活动的差异，并评估相关关系在不同区域与生态系统中的稳健性。
+  paper_ids:
+  - 20260723_Yin_CEE
+  - 20260617_Kalashnikov_SA
+  data_ids: []
+- id: sq3
+  title:
+    en: Why do some extreme wildfires cause catastrophic impacts, and how can future risks be anticipated?
+    zh: 为何部分极端野火会造成灾难性影响，我们又该如何预判未来风险？
+  paragraphs:
+    en:
+    - The severity of wildfire impacts depends on both fire behavior and the people, ecosystems, and infrastructure
+      in its path. Understanding this interaction is important for explaining spatial differences in disaster
+      risk and supporting preparedness. I aim to connect physical fire extremes with environmental consequences
+      and societal exposure, and to identify which conditions make extreme fires especially consequential.
+    - I combine geospatial fire and climate information with exposure data, using event-based analysis,
+      statistical methods, and data-driven approaches to investigate these relationships. Published work
+      on synchronous fire weather links concurrent conditions with fire activity and smoke-related air
+      pollution, and highlights their implications for coordination and shared firefighting resources.
+      This provides a basis for examining how hazards operating across regions translate into environmental
+      and societal pressures.
+    - The next stage extends toward wildfire disaster risk, differences in population and infrastructure
+      exposure, and approaches to anticipating future conditions. I plan to assess environmental drivers
+      and potential changes under future climates through explainable modeling, with attention to validation
+      and uncertainty. The long-term goal is to provide scientific evidence that can inform risk assessment
+      and preparedness.
+    zh:
+    - 野火影响的严重程度取决于火灾行为，以及受影响的人群、生态系统与基础设施。理解这些因素的共同作用，有助于解释灾害风险的空间差异并支持灾害应对。我的研究旨在连接野火物理极端性、环境后果与社会暴露，识别使极端野火产生严重影响的关键条件。
+    - 我整合野火、气候与暴露的地理空间信息，运用基于事件的分析、统计及数据驱动方法研究相关联系。已发表的火险天气同步性研究揭示了同期条件与火灾活动、烟雾相关空气污染之间的联系，并讨论其对跨区域协调和共享灭火资源的影响，为研究区域间灾害压力提供了依据。
+    - 下一步将拓展至野火灾害风险、人口和基础设施暴露差异及未来风险预判，结合可解释建模评估环境驱动因素与未来气候下的潜在变化，并重视模型验证和不确定性，逐步为风险评估与灾害应对提供科学依据。
+  paper_ids:
+  - 20260218_Yin_SA
+  data_ids: []

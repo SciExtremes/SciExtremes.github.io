@@ -1,0 +1,7 @@
+{{ $kind := .kind }}
+{{ if and (eq $kind "oral") (eq .event_type "seminar") }}{{ $kind = "seminar" }}{{ end }}
+{{ $label := i18n $kind }}
+{{ if eq .kind "other" }}{{ $label = index .kind_label site.Language.Lang }}{{ end }}
+{{ if eq .role "keynote" }}{{ $label = i18n "keynotePresentation" }}
+{{ else if eq .role "invited" }}{{ $label = printf (i18n "invitedPresentation") $label }}{{ end }}
+{{ return $label }}

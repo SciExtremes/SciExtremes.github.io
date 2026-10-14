@@ -1,0 +1,3 @@
+{{/* Filter this shared ordered list for homepage highlights without reordering it. */}}
+{{ $items := partial "items.html" (dict "site" .site "section" "publications") }}
+{{ return (partial "sort-items.html" (dict "items" $items "mode" "publications")) }}

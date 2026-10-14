@@ -1,0 +1,195 @@
+skip:
+  other: 跳至正文
+search:
+  other: 搜索
+close:
+  other: 关闭
+menu:
+  other: 菜单
+publications:
+  other: 论文
+research:
+  other: 研究
+data:
+  other: 数据
+presentations:
+  other: 报告
+news:
+  other: 动态
+about:
+  other: 关于
+education:
+  other: 教育经历
+details:
+  other: 查看详情
+abstract:
+  other: 摘要
+media:
+  other: 媒体报道
+relatedPapers:
+  other: 相关论文
+relatedPresentations:
+  other: 相关报告
+relatedNews:
+  other: 相关动态
+cite:
+  other: 引用
+searchHint:
+  other: 搜索研究、论文、数据、报告和动态
+searchUnavailable:
+  other: 搜索暂不可用，请通过栏目浏览
+poster:
+  other: 海报
+seminar:
+  other: 研讨会
+lightning:
+  other: 快闪报告
+event:
+  other: 会议链接
+notFound:
+  other: 页面未找到
+notFoundBody:
+  other: 返回首页或使用搜索查找研究与资源。
+home:
+  other: 首页
+language:
+  other: 语言
+paper:
+  other: 论文
+PDF:
+  other: PDF
+Data:
+  other: 数据
+URL:
+  other: 访问
+accessData:
+  other: 获取数据
+posterPDF:
+  other: 查看海报 PDF
+slidesPDF:
+  other: 查看报告 PDF
+featured:
+  other: 精选
+highlights:
+  other: 亮点
+exploreResearch:
+  other: 探索研究
+readPaper:
+  other: 阅读论文
+Email:
+  other: 邮箱
+Google Scholar:
+  other: 谷歌学术
+ORCID:
+  other: ORCID
+experience:
+  other: 工作经历
+present:
+  other: 至今
+supervisor:
+  other: 合作导师
+allData:
+  other: 全部数据
+allPresentations:
+  other: 全部报告
+allNews:
+  other: 全部动态
+readStory:
+  other: 阅读全文
+relatedData:
+  other: 相关数据
+Code:
+  other: 代码
+dataCode:
+  other: 数据与代码
+allPublications:
+  other: 全部论文
+profileLinks:
+  other: 个人链接
+sectionFilter:
+  other: 栏目
+viewCV:
+  other: 查看简历
+scientificQuestions:
+  other: 科学问题
+attentionLoading:
+  other: Altmetric 分数正在加载
+attentionEmpty:
+  other: 暂无可用的 Altmetric 分数
+attentionUnavailable:
+  other: Altmetric 分数暂时无法加载
+LinkedIn:
+  other: LinkedIn
+ResearchGate:
+  other: ResearchGate
+representativeWork:
+  other: 代表性成果
+researchQuestionsIntro:
+  other: 三个相互联系的科学问题构成我的研究主线：从气候极端事件，到野火行为，再到社会影响与风险。
+relatedQuestions:
+  other: 相关科学问题
+questionSignificanceObjectives:
+  other: 研究意义与目标
+questionApproachProgress:
+  other: 研究方法与进展
+questionNextSteps:
+  other: 下一步工作
+frameworkPaper:
+  other: 阅读与%s相关的论文：%s
+
+oral:
+  other: 口头报告
+other:
+  other: 其他
+online:
+  other: 线上
+hybrid:
+  other: 线上与现场
+invitedPresentation:
+  other: 受邀%s
+keynotePresentation:
+  other: 主旨报告
+publicationType_conference:
+  other: 会议论文
+publicationType_preprint:
+  other: 预印本
+publicationType_chapter:
+  other: 书章
+publicationType_report:
+  other: 报告
+publicationStatus_online_first:
+  other: 在线发表
+publicationStatus_accepted:
+  other: 已接收
+equalContribution:
+  other: 共同贡献
+correspondingAuthor:
+  other: 通讯作者
+relatedVersions:
+  other: 相关版本
+issue:
+  other: 期
+version:
+  other: 版本
+updated:
+  other: 更新
+citation:
+  other: 引用方式
+resourceType_dataset:
+  other: 数据集
+resourceType_code:
+  other: 代码
+resourceType_software:
+  other: 软件
+resourceType_tool:
+  other: 在线工具
+resourceType_other:
+  other: 资源
+recording:
+  other: 录像
+documentation:
+  other: 文档
+demo:
+  other: 演示
+supplement:
+  other: 补充材料

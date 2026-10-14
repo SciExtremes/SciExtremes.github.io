@@ -1,0 +1,7 @@
+{{ $items := partial "related-pages.html" . }}
+{{ if $items }}
+<section class="related-section" id="{{ .anchor }}">
+  <h2>{{ i18n .heading }}</h2>
+  <ul>{{ range $items }}<li><a href="{{ .RelPermalink }}">{{ partial "title.html" . }}</a></li>{{ end }}</ul>
+</section>
+{{ end }}

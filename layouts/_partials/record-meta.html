@@ -1,0 +1,1 @@
+<p class="eyebrow">{{ partial "dated.html" . }}{{ if .kind }} · {{ partial "presentation-kind.html" . }}{{ end }}{{ with .event }} · {{ (index ($.event_label | default dict) site.Language.Lang) | default . }}{{ end }}{{ if in (slice "online" "hybrid") .participation }} · {{ i18n .participation }}{{ end }}</p>

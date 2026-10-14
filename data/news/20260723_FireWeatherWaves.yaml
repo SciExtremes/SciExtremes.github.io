@@ -1,0 +1,18 @@
+id: 20260723_FireWeatherWaves
+date: '2026-07-23'
+paper_ids:
+- 20260723_Yin_CEE
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: false
+date_precision: day
+image: ''
+image_fit: contain
+links: []
+image_alt:
+  en: ''
+  zh: ''
+presentation_ids: []

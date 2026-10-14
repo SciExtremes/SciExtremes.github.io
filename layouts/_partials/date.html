@@ -1,0 +1,5 @@
+{{/* Month-only sources are not displayed with an invented day. */}}
+{{ $format := index site.Params.dateFormat site.Language.Lang }}
+{{ if eq .date_precision "month" }}{{ $format = index site.Params.monthFormat site.Language.Lang }}{{ end }}
+{{ if eq .date_precision "year" }}{{ $format = "2006" }}{{ end }}
+{{ return ((time.AsTime .date).Format $format) }}

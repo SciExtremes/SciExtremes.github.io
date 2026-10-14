@@ -1,0 +1,4 @@
+{{ $labels := slice }}
+{{ if ne .type "article" }}{{ $labels = $labels | append (i18n (printf "publicationType_%s" .type)) }}{{ end }}
+{{ if and (ne .status "published") (ne .status "preprint") }}{{ $labels = $labels | append (i18n (printf "publicationStatus_%s" .status)) }}{{ end }}
+{{ if $labels }}<p class="eyebrow publication-status">{{ delimit $labels " · " }}</p>{{ end }}

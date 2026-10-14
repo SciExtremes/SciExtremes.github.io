@@ -1,0 +1,35 @@
+id: 20230327_Xin_IJOC
+title: One‐kilometre monthly air temperature and precipitation product over the Mongolian Plateau for
+  1950–2020
+authors:
+- Ying Xin
+- Yaping Yang
+- Xiaona Chen
+- Xiafang Yue
+- Yangxiaoyue Liu
+- Cong Yin
+journal: International Journal of Climatology
+date: '2023-03-27'
+doi: 10.1002/joc.8063
+volume: '43'
+number: '8'
+pages: 3877--3891
+links:
+- label: URL
+  url: https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.8063
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: false
+  media: true
+  attention: true
+year: 2023
+date_precision: day
+image: ''
+image_fit: contain
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''

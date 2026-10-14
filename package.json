@@ -1,0 +1,27 @@
+{
+  "name": "sciextremes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual academic website built with native Hugo",
+  "scripts": {
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --minify --cleanDestinationDir && pagefind --site public",
+    "check:content": "python3 scripts/validate_content.py",
+    "check:interactions": "node --test scripts/test_interactions.mjs",
+    "check:links": "python3 scripts/check_links.py public",
+    "check": "npm run check:docs && npm run check:content && npm run check:model && npm run check:interactions && npm run check:links",
+    "new": "python3 scripts/new_content.py",
+    "check:model": "python3 scripts/test_content.py",
+    "check:browser": "node scripts/test_browser.cjs",
+    "check:scenarios": "python3 scripts/test_scenarios.py",
+    "check:docs": "python3 scripts/check_docs.py",
+    "check:template": "python3 scripts/test_template.py"
+  },
+  "devDependencies": {
+    "pagefind": "1.5.2",
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

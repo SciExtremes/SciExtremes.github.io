@@ -1,0 +1,12 @@
+{{/* Scientific figures retain their full extent; never crop a data graphic. */}}
+{{ with partial "image-data.html" (dict "path" .image) }}
+  <figure class="content-figure">
+    <img
+      src="{{ .src }}"
+      alt="{{ $.alt | default $.caption | default $.title }}"
+      loading="lazy"
+      {{ if .width }}width="{{ .width }}" height="{{ .height }}"{{ end }}
+    />
+    {{ with $.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+{{ end }}

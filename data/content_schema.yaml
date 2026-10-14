@@ -1,0 +1,109 @@
+# Shared contract for Hugo normalization, Python validation and content creation.
+# Explicit values override defaults. Optional values may be omitted.
+version: 1
+common:
+  required: [id, date]
+  fields:
+    id: string
+    date: date
+    date_precision: string
+    end_date: date
+    updated: date
+    image: string
+    image_fit: string
+    image_alt: bilingual
+    links: list
+    paper_ids: ids
+    display: object
+  defaults:
+    date_precision: day
+    image: ''
+    image_fit: contain
+    image_alt: {en: '', zh: ''}
+    links: []
+    paper_ids: []
+  enums:
+    date_precision: [day, month, year]
+    image_fit: [contain, cover]
+display:
+  common: {visible: true, featured: false, home: false, order: 0, image: false}
+  publications: {media: false, attention: false}
+groups:
+  publications:
+    section: publications
+    required: [title, authors]
+    fields:
+      title: string
+      authors: strings
+      type: string
+      status: string
+      journal: string
+      doi: string
+      year: integer
+      volume: scalar
+      number: scalar
+      pages: scalar
+      article_number: scalar
+      booktitle: string
+      publisher: string
+      institution: string
+      repository: string
+      identifier: string
+      url: string
+      author_roles: object
+      related_version_ids: ids
+    defaults:
+      type: article
+      status: published
+      journal: ''
+      doi: ''
+      volume: ''
+      number: ''
+      pages: ''
+      article_number: ''
+      author_roles: {}
+      related_version_ids: []
+    enums:
+      type: [article, conference, preprint, chapter, report]
+      status: [published, online_first, accepted, preprint]
+    bibtex: {article: article, conference: inproceedings, preprint: misc, chapter: incollection, report: techreport}
+  resources:
+    section: data
+    required: [name]
+    fields:
+      name: string
+      resource_type: string
+      version: scalar
+      license: string
+      doi: string
+      citation: object
+      related_version_ids: ids
+    defaults: {resource_type: '', version: '', license: '', doi: '', citation: {}, related_version_ids: []}
+    enums:
+      resource_type: ['', dataset, code, software, tool, other]
+  presentations:
+    section: presentations
+    required: [event, kind]
+    fields:
+      event: string
+      event_url: string
+      event_label: bilingual
+      location: string
+      location_label: bilingual
+      kind: string
+      kind_label: bilingual
+      event_type: string
+      role: string
+      participation: string
+    defaults: {event_url: '', location: '', event_type: '', role: '', participation: ''}
+    enums:
+      kind: [poster, oral, seminar, lightning, other]
+      event_type: ['', conference, seminar, workshop, other]
+      role: ['', contributed, invited, keynote]
+      participation: ['', onsite, online, hybrid]
+  news:
+    section: news
+    required: []
+    fields:
+      presentation_ids: ids
+    defaults: {presentation_ids: []}

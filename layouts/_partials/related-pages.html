@@ -1,0 +1,9 @@
+{{/* Resolve only visible records so links and their target sections agree. */}}
+{{ $pages := slice }}
+{{ range .ids }}
+  {{ with site.GetPage (printf "/%s/%s" $.section .) }}
+    {{ $record := partial "record.html" . }}
+    {{ if $record.display.visible }}{{ $pages = $pages | append . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ return $pages }}

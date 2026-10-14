@@ -1,0 +1,19 @@
+{{/* Research owns its curated references; titles and URLs still resolve from shared records. */}}
+{{ $resources := slice }}
+{{ range slice (dict "section" "publications" "ids" .paper_ids) (dict "section" "data" "ids" .data_ids) }}
+  {{ range partial "related-pages.html" . }}
+    {{ $record := partial "record.html" . }}
+    {{ $resources = $resources | append (dict "page" . "record" $record "title" (partial "title.html" .)) }}
+  {{ end }}
+{{ end }}
+{{ if $resources }}
+  <h4 class="eyebrow">{{ i18n "representativeWork" }}</h4>
+  <ul class="question-resources">
+    {{ range $item := $resources }}
+      <li>
+        <a href="{{ .page.RelPermalink }}">{{ .record.name | default .title }} <span aria-hidden="true">↗</span></a>
+        {{ with partial "publication-venue.html" .record }}<span class="resource-meta">{{ . }} · {{ $item.record.year | default (time.AsTime $item.record.date).Year }}</span>{{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

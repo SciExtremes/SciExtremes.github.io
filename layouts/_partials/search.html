@@ -1,0 +1,22 @@
+<dialog
+  id="search-dialog"
+  aria-labelledby="search-title"
+  data-pagefind-ignore
+  data-assets="{{ "pagefind/" | relURL }}"
+  data-language="{{ .Site.Language.Lang }}"
+  data-unavailable="{{ i18n "searchUnavailable" }}"
+>
+  <div class="search-heading">
+    <h2 id="search-title">{{ i18n "search" }}</h2>
+    <button
+      class="icon-button"
+      data-search-close
+      aria-label="{{ i18n "close" }}"
+    >
+      {{ partial "icon.html" "close" }}
+    </button>
+  </div>
+  <p>{{ i18n "searchHint" }}</p>
+  <div id="search-results" aria-live="polite"></div>
+  <noscript>{{ i18n "searchUnavailable" }}</noscript>
+</dialog>

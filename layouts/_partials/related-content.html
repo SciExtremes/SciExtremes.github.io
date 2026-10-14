@@ -1,0 +1,10 @@
+{{ $sections := .sections | default (slice "data" "presentations" "news") }}
+{{ $field := .field | default "paper_ids" }}
+{{ range $section := $sections }}
+  {{ $items := partial "items.html" (dict "site" $.page.Site "section" $section) }}
+  {{ $related := where $items (printf "record.%s" $field) "intersect" (slice $.id) }}
+  {{ if $related }}<section class="related-section" id="related-{{ $section }}">
+    <h2>{{ i18n (printf "related%s" ($section | strings.FirstUpper)) }}</h2>
+    <ul>{{ range $related }}<li><a href="{{ .page.RelPermalink }}">{{ .title }}</a></li>{{ end }}</ul>
+  </section>{{ end }}
+{{ end }}

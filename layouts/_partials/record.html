@@ -1,0 +1,13 @@
+{{/* Shared records own facts and display settings; Markdown owns localized prose. */}}
+{{ $group := .Section }}{{ if eq $group "data" }}{{ $group = "resources" }}{{ end }}
+{{ $record := dict }}
+{{ with .Params.record_id }}
+  {{ with index (index hugo.Data $group) . }}
+    {{ $schema := hugo.Data.content_schema }}
+    {{ $record = merge $schema.common.defaults (index $schema.groups $group).defaults . }}
+    {{ if and (eq $group "publications") (eq $record.type "preprint") (not (isset . "status")) }}{{ $record = merge $record (dict "status" "preprint") }}{{ end }}
+    {{ $display := merge $schema.display.common (index $schema.display $group | default dict) (.display | default dict) }}
+    {{ $record = merge $record (dict "display" $display) }}
+  {{ end }}
+{{ end }}
+{{ return $record }}

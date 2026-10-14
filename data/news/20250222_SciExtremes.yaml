@@ -1,0 +1,17 @@
+id: 20250222_SciExtremes
+date: '2025-02-22'
+image_fit: contain
+image: news/20250222_SciExtremes.jpg
+display:
+  visible: true
+  featured: false
+  home: false
+  order: 0
+  image: true
+date_precision: day
+links: []
+paper_ids: []
+image_alt:
+  en: ''
+  zh: ''
+presentation_ids: []

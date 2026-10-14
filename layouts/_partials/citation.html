@@ -1,0 +1,13 @@
+{{/* Generate the download from the same facts as the bibliography, never a second author list. */}}
+{{ $r := .record }}
+{{ $fields := slice (printf "title = {{%s}}" (partial "bibtex-value.html" $r.title)) (printf "author = {%s}" (partial "bibtex-value.html" (delimit $r.authors " and "))) (printf "year = {%d}" (int ($r.year | default (time.AsTime $r.date).Year))) }}
+{{ if eq $r.status "accepted" }}{{ $fields = $fields | append "note = {Accepted for publication}" }}{{ else if eq $r.status "preprint" }}{{ $fields = $fields | append "note = {Preprint}" }}{{ end }}
+{{ range $field := slice "journal" "volume" "number" "pages" "booktitle" "publisher" "institution" }}{{ with index $r $field }}{{ $fields = $fields | append (printf "%s = {%s}" $field (partial "bibtex-value.html" .)) }}{{ end }}{{ end }}
+{{ with $r.article_number }}{{ $fields = $fields | append (printf "eid = {%s}" (partial "bibtex-value.html" .)) }}{{ end }}
+{{ with $r.repository }}{{ $fields = $fields | append (printf "howpublished = {%s}" (partial "bibtex-value.html" .)) }}{{ end }}
+{{ with $r.identifier }}{{ $fields = $fields | append (printf "eprint = {%s}" (partial "bibtex-value.html" .)) }}{{ end }}
+{{ with $r.doi }}{{ $fields = $fields | append (printf "doi = {%s}" .) (printf "url = {https://doi.org/%s}" .) }}{{ else }}{{ with $r.url }}{{ $fields = $fields | append (printf "url = {%s}" .) }}{{ end }}{{ end }}
+{{ $entryType := index hugo.Data.content_schema.groups.publications.bibtex $r.type }}
+{{ $text := printf "@%s{%s,\n  %s\n}\n" $entryType $r.id (delimit $fields ",\n  ") }}
+{{ $path := strings.TrimPrefix "/" (strings.TrimPrefix (urls.Parse site.BaseURL).Path .page.RelPermalink) }}
+{{ return (resources.FromString (printf "%scite.bib" $path) $text) }}

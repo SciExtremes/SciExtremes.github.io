@@ -1,0 +1,4 @@
+{{ $actions := .record.links | default slice }}
+{{ if .record.citation }}{{ $bib := partial "resource-citation.html" . }}{{ $actions = $actions | append (dict "url" $bib.RelPermalink "label" "cite" "download" true) }}{{ end }}
+{{ if and .record.doi (not .record.links) }}{{ $actions = $actions | append (dict "url" (printf "https://doi.org/%s" .record.doi) "label" "accessData") }}{{ end }}
+{{ return $actions }}

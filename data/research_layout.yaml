@@ -1,0 +1,21 @@
+# Presentation settings for the four-stage framework preset.
+framework_enabled: true
+paragraph_labels:
+  - questionSignificanceObjectives
+  - questionApproachProgress
+  - questionNextSteps
+representative_paper_limit: 3
+modifier_group_size: 2
+stages:
+  - tone: blue
+    icon: globe
+    modulated: false
+  - tone: amber
+    icon: cloud
+    modulated: false
+  - tone: green
+    icon: forest
+    modulated: true
+  - tone: slate
+    icon: city
+    modulated: false

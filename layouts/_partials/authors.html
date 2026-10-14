@@ -1,0 +1,12 @@
+{{/* Emit separators explicitly so indentation cannot add spaces before commas. */}}
+{{- $aliases := hugo.Data.profile.author_names | default (slice hugo.Data.profile.en.name) -}}
+{{- range $i, $author := .authors -}}
+  {{- if $i -}}{{- ", " -}}{{- end -}}
+  {{- if in $aliases $author -}}
+    <strong>{{ $author }}</strong>
+  {{- else -}}
+    {{- $author -}}
+  {{- end -}}
+  {{- if in ($.author_roles.equal_contribution | default slice) $author -}}<sup aria-label="{{ i18n "equalContribution" }}">*</sup>{{- end -}}
+  {{- if in ($.author_roles.corresponding | default slice) $author -}}<sup aria-label="{{ i18n "correspondingAuthor" }}">†</sup>{{- end -}}
+{{- end -}}
